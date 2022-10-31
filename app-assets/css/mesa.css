@@ -249,4 +249,15 @@ a.btn.buttons-collection.btn-outline-secondary.dropdown-toggle.mr-2.mt-50:hover{
     padding-top: 22px;
 }
 
+.media [class*="avatar-"] i{
+    position: absolute;
+    right: 47px !important;
+    bottom: -1px;
+    width: 10px;
+    height: 10px;
+    border: 2px solid white;
+    border-radius: 100%;
+    top: 16px !important;
+}
+
 
