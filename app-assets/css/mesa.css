@@ -259,5 +259,21 @@ a.btn.buttons-collection.btn-outline-secondary.dropdown-toggle.mr-2.mt-50:hover{
     border-radius: 100%;
     top: 16px !important;
 }
+.info_black .info{
+    color: #111111 !important;
+    font-weight: bold;
+}
+.pie_chart_dev a.active{
+    background-color: unset !important;
+    color: #215CA8 !important;
+    border-bottom: 3px solid !important;
+    border-radius: 0px !important;
+}
+
+.pie_chart_dev a{
+    background-color: unset !important;
+    color: #ADB8CC !important;
+
+}
 
 

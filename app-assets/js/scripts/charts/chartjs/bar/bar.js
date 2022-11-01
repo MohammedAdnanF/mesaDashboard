@@ -66,13 +66,13 @@ $(window).on("load", function(){
         datasets: [{
             label: "My First dataset",
             data: [65, 59, 80, 81],
-            backgroundColor: "#28D094",
+            backgroundColor: "#FF6633",
             hoverBackgroundColor: "rgba(22,211,154,.9)",
             borderColor: "transparent"
         }, {
             label: "My Second dataset",
             data: [28, 48, 40, 19],
-            backgroundColor: "#F98E76",
+            backgroundColor: "#3361FF",
             hoverBackgroundColor: "rgba(249,142,118,.9)",
             borderColor: "transparent"
         }]

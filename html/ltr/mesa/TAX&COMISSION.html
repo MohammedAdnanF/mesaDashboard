@@ -14,6 +14,9 @@
   rel="stylesheet">
   <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
   rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/mesa.css">
+
   <!-- BEGIN VENDOR CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
   <!-- END VENDOR CSS-->
@@ -21,19 +24,18 @@
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css">
   <!-- END MODERN CSS-->
   <!-- BEGIN Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/icheck.css">
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/custom.css">
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
   <!-- END Page Level CSS-->
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
   <!-- END Custom CSS-->
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/mesa.css">
-
 </head>
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
 data-open="click" data-menu="vertical-menu" data-col="2-columns">
   <!-- fixed-top-->
-  <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-info navbar-shadow">
+  <nav class="header-navbar navbar-expand-md navbar navbar-with-menu navbar-without-dd-arrow fixed-top navbar-semi-light bg-info ">
     <div class="navbar-wrapper">
       <div class="navbar-header">
         <ul class="nav navbar-nav flex-row">
@@ -70,11 +72,11 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                     top: 1px;
                     right: 1px;
                     background: #ededed;">
-                          <button class="search_button" style="border: none; height: 10px;">
-                            <i class="la la-search" style="color: #215CA8;
-                            font-size: 18px;
-                            transform: rotate(266deg);"></i>
-                          </button>
+                    <button class="search_button" style="border: none; height: 10px;">
+                      <i class="la la-search" style="color: #215CA8;
+                      font-size: 18px;
+                      transform: rotate(266deg);"></i>
+                    </button>
                     </div>
                   </fieldset>
                 </form>
@@ -87,14 +89,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
           </ul>
           <ul class="nav navbar-nav float-right">
        
-            <!-- <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"></span></a>
-              <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#"><i class="flag-icon flag-icon-gb"></i> English</a>
-                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-fr"></i> French</a>
-                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-cn"></i> Chinese</a>
-                <a class="dropdown-item" href="#"><i class="flag-icon flag-icon-de"></i> German</a>
-              </div>
-            </li> -->
+      
             <li class="dropdown dropdown-notification nav-item">
               <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
                 <span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>
@@ -550,58 +545,76 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
   </div>
   <div class="app-content content">
     <div class="content-wrapper">
-        <div class="content-header row">
-          <div class="content-header-left col-md-6 col-12 mb-2">
-            <div class="row breadcrumbs-top">
-              <div class="breadcrumb-wrapper col-12">
-                <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
-                  </li>
-                  <li class="breadcrumb-item"><a href="index.html">Setting</a>
-                  </li>
-                  <li class="breadcrumb-item active">About us
-                  </li>
-                </ol>
-              </div>
+      <div class="content-header row">
+        <div class="content-header-left col-md-6 col-12 mb-2">
+          <div class="row breadcrumbs-top">
+            <div class="breadcrumb-wrapper col-12">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item"><a href="index.html">Amal Hotel</a>
+                </li>
+                <li class="breadcrumb-item active">new owner
+                </li>
+              </ol>
             </div>
           </div>
-     
         </div>
-        <div class="content-body">
-            <section class="application">
-                <form action="">
-                    <div class="container">
-                            <!-- Basic CKEditor start -->
-        <section id="basic">
-            <div class="row">
-              <div class="col-12">
-                <div class="card">
-                  <div class="card-header">
-                    <h4 class="card-title">About Us</h4>
-                    <a class="heading-elements-toggle"><i class="la la-ellipsis-h font-medium-3"></i></a>
-                 
-                  </div>
-                  <div class="card-content collapse show">
-                    <div class="card-body">
-        
-                      <div class="form-group">
-                        <textarea name="ckeditor" id="ckeditor" cols="30" rows="15" class="ckeditor">
-          </textarea>
+   
+      </div>
+      <div class="content-body">
+        <!-- Zero configuration table -->
+        <section id="configuration">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+     
+                <div class="card-content collapse show">
+                  <div class="card-body card-dashboard">
+                    <div class="row">
+                      <div class="col">
+                        <h4 class="card-title" id="basic-layout-form"> Tax</h4>
+                        <p>
+                          The current application Tax is 5% for all types of business
+                        </p>
+                      </div>
+                      <div class="col text-right">
+                        <a href=""><i class="ft-edit-3"></i> Edit </a>
                       </div>
                     </div>
+                    <div class="row mt-3">
+                      <div class="col">
+                        <h4 class="card-title" id="basic-layout-form"> Commission</h4>
+                        <ul class="comission_list">
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>                 
+                           <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+                          <li>Hourly commission per day is <span>5%</span> </li>
+
+                        </ul>
+                      </div>
+                      <div class="col text-right">
+                        <a href=""><i class="ft-edit-3"></i> Edit </a>
+                      </div>
+                    </div>
+          
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-          <!-- Basic CKEditor end -->
-                    </div>
-                </form>
-            </section>
-  
-        </div>
-      </div>
+          </div>
+        </section>
+        <!--/ Zero configuration table -->
 
+      </div>
+    </div>
   </div>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
   <footer class="footer footer-static footer-light navbar-border navbar-shadow">
@@ -614,18 +627,29 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
   <!-- BEGIN VENDOR JS-->
   <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
-  <script src="../../../app-assets/vendors/js/editors/ckeditor/ckeditor.js" type="text/javascript"></script>
-
   <!-- BEGIN PAGE VENDOR JS-->
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN MODERN JS-->
+  <script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
+
   <script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
   <script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>
   <script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../../app-assets/js/scripts/editors/editor-ckeditor.js" type="text/javascript"></script>
+  <script src="../../../app-assets/vendors/js/tables/jquery.dataTables.min.js" type="text/javascript"></script>
+  <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"
+  type="text/javascript"></script>
+  <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.responsive.min.js"
+  type="text/javascript"></script>
+  <script src="../../../app-assets/vendors/js/tables/datatable/dataTables.rowReorder.min.js"type="text/javascript"></script> 
+  <!-- <script src="../../../app-assets/js/scripts/tables/datatables/datatable-basic.js"
+  type="text/javascript"></script>   -->
+  <script src="../../../app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
 
   <!-- END PAGE LEVEL JS-->
+  <script src="../../../app-assets/js/scripts/pages/users-contacts.js" type="text/javascript"></script>
+
 </body>
+
 </html>
