@@ -1,6 +1,15 @@
 (function(window, undefined) {
   'use strict';
 
+  $(window).on('click', function () {
+    $('.slider-menu').fadeOut('fast');
+  });
+
+  $('.slider-menu-bar').on('click', function (event) {
+    event.stopPropagation();
+    $(this).children('.slider-menu').fadeIn('fast');
+  });
+
   /*
   NOTE:
   ------
