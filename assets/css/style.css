@@ -89,6 +89,12 @@ img {
 }
 
 svg path{
+    transition: all 0.2s ease-in-out;
+}
+
+button{
+    outline: none !important;
+    box-shadow: none;
     transition: all 0.3s ease-in-out;
 }
 
@@ -193,6 +199,13 @@ html body .content .content-wrapper {
 }
 .text-warning{
     color: var(--warning-color) !important;
+}
+.text-black{
+    color: #111111 !important;
+}
+
+.text-align-justify{
+    text-align: justify;
 }
 
 .space-nowrap{
@@ -371,6 +384,168 @@ ul.d-flex li{
 ul.d-flex li>img{
     margin-right: 10px;
 }
+
+.modal-content{
+    border: 0;
+}
+
+.modal-content .modal-header,
+.modal-content .modal-body{
+    padding: 25px;
+}
+
+.modal-content.lg-padding .modal-header{
+    padding: 25px 40px;
+}
+
+.modal-content.lg-padding .modal-body{
+    padding: 35px 40px 45px;
+}
+
+.modal-header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .close{
+    transition: all 0.3s ease-in-out;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-header h5{
+    font-size: 20px;
+    line-height: 24px;
+    color: #111111;
+    font-family: 'Montserrat-500';
+}
+
+@media (min-width: 767px){
+    .modal-dialog {
+        max-width: 642px;
+    }
+}
+
+.modal .btn{
+    min-width: 335px;
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.input-group label{
+    display: inline-flex;
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #111111;
+    font-family: 'Montserrat-500';
+    text-transform: capitalize;
+}
+
+.input-group input{
+    width: 100%;
+    text-align: center;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: capitalize;
+    font-family: 'Montserrat-500';
+    height: 45px;
+    padding: 0 20px;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus{
+    background-color: #266ac2 !important;
+    border-color: #266ac2 !important;
+}
+
+.btn-transparent{
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    color: var(--primary-color);
+}
+
+.btn-transparent svg path{
+    stroke: var(--primary-color);
+}
+
+.btn-transparent:hover,
+.btn-transparent:active,
+.btn-transparent:focus{
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: #FFF;
+}
+
+.btn-transparent:hover svg path,
+.btn-transparent:active svg path,
+.btn-transparent:focus svg path{
+    stroke: #FFF;
+}
+
+.btn-sm{
+    font-size: 16px;
+    line-height: 18px; 
+    padding: 7px 14px;
+    height: 38px;
+}
+
+.btn-sm svg{
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.nav-tabs{
+    border: 0;
+    gap: 25px;
+}
+
+.nav.nav-tabs .nav-item .nav-link{
+    border: 0;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    padding: 0 0 8px;
+    text-transform: capitalize;
+    font-family: 'Montserrat-500';
+    color: rgba(17, 17, 17, 0.7);
+    font-size: 18px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+.nav.nav-tabs .nav-item .nav-link.active{
+    border-bottom: 1px solid #215CA8;
+    color: var(--primary-color);
+}
 /* 
 --------------------------------------------------------------------------------
 	End Common Style
@@ -398,6 +573,46 @@ ul.d-flex li>img{
 
 .card-body{
 	padding: 25px;
+}
+
+.tab-content .report-title{
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.tab-content .report-date{
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.tab-content .owner-information{
+    margin: 0 -25px;
+}
+
+.tab-content .owner-information li{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    border-bottom: 1px solid #D0D0D0;
+    padding: 16px 24px;
+    text-transform: capitalize;
+    color: rgba(17, 17, 17, 0.7);
+}
+
+.tab-content .owner-information li:last-child{
+    border-bottom: 0;
+}
+
+.tab-content .owner-information li span{
+    font-family: 'Montserrat-500';
+}
+
+.tab-content .owner-information li span:first-child{
+    display: inline-flex;
+    min-width: 25%;
 }
 /* 
 --------------------------------------------------------------------------------

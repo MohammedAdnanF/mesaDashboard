@@ -147,7 +147,7 @@ outline: none;
 color: #000000;
 }
 .modal-header{
-    border-bottom: 1px solid #98a4b82b !important;
+    border-bottom: 1px solid #98a4b82b;
 }
 .modal_button_language{
     width: 200px !important;

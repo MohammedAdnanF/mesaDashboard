@@ -15,7 +15,9 @@
   <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
   rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/mesa.css">
+  <!-- BEGIN Fontawesome CSS-->
+  <link rel="stylesheet" type="text/css" href="../../../assets/fonts/fontawesome/css/fontawesome.css">
+  <!-- END Fontawesome CSS-->
 
   <!-- BEGIN VENDOR CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
@@ -28,6 +30,7 @@
   <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/custom.css">
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
   <!-- END Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/mesa.css">
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
   <!-- END Custom CSS-->
@@ -545,22 +548,19 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
   </div>
   <div class="app-content content">
     <div class="content-wrapper">
-      <div class="content-header row">
-        <div class="content-header-left col-md-6 col-12 mb-2">
-          <div class="row breadcrumbs-top">
-            <div class="breadcrumb-wrapper col-12">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
-                </li>
-                <li class="breadcrumb-item"><a href="index.html">Amal Hotel</a>
-                </li>
-                <li class="breadcrumb-item active">new owner
-                </li>
-              </ol>
-            </div>
+      <div class="content-header">
+        <div class="breadcrumbs-top">
+          <div class="breadcrumb-wrapper col-12">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item"><a href="index.html">Amal Hotel</a>
+              </li>
+              <li class="breadcrumb-item active">new owner
+              </li>
+            </ol>
           </div>
         </div>
-   
       </div>
       <div class="content-body">
         <!-- Zero configuration table -->
@@ -573,18 +573,35 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                   <div class="card-body card-dashboard">
                     <div class="row">
                       <div class="col">
-                        <h4 class="card-title" id="basic-layout-form"> Tax</h4>
+                        <div class="flex-space mb-25">
+                          <h4 class="card-title fs-20 text-semibold mb-0" id="basic-layout-form">Tax</h4>
+                          <button class="btn btn-transparent btn-sm" data-toggle="modal" data-target="#changeCommission">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3811 5.61828V5.61828C19.2095 6.44721 19.2095 7.7906 18.3811 8.61953L8.38992 18.6107C8.13353 18.8671 7.81229 19.049 7.46054 19.1369L3.99609 20.0033L4.86245 16.5388C4.95041 16.1871 5.1323 15.8658 5.38867 15.6094L15.3808 5.61828C16.2094 4.79 17.5525 4.79 18.3811 5.61828Z" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M16.5013 10.4993L13.5 7.49805" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M22.0034 19.0024L20.9089 20.0969C19.7002 21.3053 17.7408 21.3053 16.5321 20.0969V20.0969C15.3219 18.8911 13.3645 18.8911 12.1543 20.0969" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Edit
+                          </button>
+                        </div>
                         <p>
                           The current application Tax is 5% for all types of business
                         </p>
                       </div>
-                      <div class="col text-right">
-                        <a href=""><i class="ft-edit-3"></i> Edit </a>
-                      </div>
                     </div>
                     <div class="row mt-3">
                       <div class="col">
-                        <h4 class="card-title" id="basic-layout-form"> Commission</h4>
+                        <div class="flex-space mb-25">
+                          <h4 class="card-title fs-20 text-semibold mb-0" id="basic-layout-form">Commission</h4>
+                          <button class="btn btn-transparent btn-sm" data-toggle="modal" data-target="#changeCommission">
+                            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3811 5.61828V5.61828C19.2095 6.44721 19.2095 7.7906 18.3811 8.61953L8.38992 18.6107C8.13353 18.8671 7.81229 19.049 7.46054 19.1369L3.99609 20.0033L4.86245 16.5388C4.95041 16.1871 5.1323 15.8658 5.38867 15.6094L15.3808 5.61828C16.2094 4.79 17.5525 4.79 18.3811 5.61828Z" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M16.5013 10.4993L13.5 7.49805" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                              <path d="M22.0034 19.0024L20.9089 20.0969C19.7002 21.3053 17.7408 21.3053 16.5321 20.0969V20.0969C15.3219 18.8911 13.3645 18.8911 12.1543 20.0969" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            Edit
+                          </button>
+                        </div>
                         <ul class="comission_list">
                           <li>Hourly commission per day is <span>5%</span> </li>
                           <li>Hourly commission per day is <span>5%</span> </li>
@@ -597,11 +614,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           <li>Hourly commission per day is <span>5%</span> </li>
                           <li>Hourly commission per day is <span>5%</span> </li>
                           <li>Hourly commission per day is <span>5%</span> </li>
-
                         </ul>
-                      </div>
-                      <div class="col text-right">
-                        <a href=""><i class="ft-edit-3"></i> Edit </a>
                       </div>
                     </div>
           
@@ -613,6 +626,62 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </section>
         <!--/ Zero configuration table -->
 
+      </div>
+    </div>
+  </div>
+  <!--=== Commission Modal ===-->
+  <div class="modal fade" id="changeCommission" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="">Change Mesa Commission</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <i class="fal fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div class="input-group">
+                <label for="">Hourly/per day</label>
+                <input type="text" name="" id="" value="5 %">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input-group">
+                <label for="">Hourly/per week</label>
+                <input type="text" name="" id="" value="5 %">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input-group">
+                <label for="">full space/per week</label>
+                <input type="text" name="" id="" value="5 %">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input-group">
+                <label for="">full space/per month</label>
+                <input type="text" name="" id="" value="5 %">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input-group">
+                <label for="">full space/per year</label>
+                <input type="text" name="" id="" value="5 %">
+              </div>
+            </div>
+            <div class="col-md-6 col-12">
+              <div class="input-group">
+                <label for="">buffet/per person</label>
+                <input type="text" name="" id="" value="5 %">
+              </div>
+            </div>
+          </div>
+          <div class="flex-center">
+            <button type="submit" class="btn btn-primary">save</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
