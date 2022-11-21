@@ -19,67 +19,60 @@ $(window).on("load", function(){
     var chartOptions = {
         // Elements options apply to all of the options unless overridden in a dataset
         // In this case, we are setting the border of each horizontal bar to be 2px wide and green
-        elements: {
-            rectangle: {
-                borderWidth: 2,
-                borderColor: 'rgb(0, 255, 0)',
-                borderSkipped: 'left'
-            }
-        },
         responsive: true,
         maintainAspectRatio: false,
         responsiveAnimationDuration:500,
-        legend: {
-            position: 'top',
-        },
+        indexAxis: 'y',
+        categoryPercentage: 0.15,
+        barPercentage: 1.0,
         scales: {
-            xAxes: [{
+            xAxes: {
                 display: true,
-                gridLines: {
-                    color: "#f3f3f3",
-                    drawTicks: false,
+                title: {
+                    display: true
                 },
-                scaleLabel: {
-                    display: true,
-                }
-            }],
-            yAxes: [{
+                grid: {
+                    display: false,
+                },
+            },
+            yAxes: {
                 display: true,
-                gridLines: {
-                    color: "#f3f3f3",
-                    drawTicks: false,
-                },
-                scaleLabel: {
+                title: {
                     display: true,
+                },
+                grid: {
+                    display: false,
+                },
+                ticks: {
+                    crossAlign: 'far',
                 }
-            }]
+            },
         },
         title: {
             display: false,
             text: 'Chart.js Horizontal Bar Chart'
+        },
+        plugins: {
+            legend: {
+                display: false,
+            }
         }
     };
 
     // Chart Data
     var chartData = {
-        labels: ["January", "February", "March", "April"],
+        labels: ["Amal hotel", "Jeddah office", "lolo Cafe", "Amal hotel", "Subway resturant"],
         datasets: [{
-            label: "My First dataset",
-            data: [65, 59, 80, 81],
-            backgroundColor: "#FF6633",
-            hoverBackgroundColor: "rgba(22,211,154,.9)",
-            borderColor: "transparent"
-        }, {
             label: "My Second dataset",
-            data: [28, 48, 40, 19],
-            backgroundColor: "#3361FF",
-            hoverBackgroundColor: "rgba(249,142,118,.9)",
-            borderColor: "transparent"
+            data: [113, 48, 40, 19, 6],
+            backgroundColor: ["#FF6633", "#3361FF", "#8833FF", "#FB33FF", "#2EE6CA"], 
+            borderColor: "transparent",
+            borderRadius: 6,
         }]
     };
 
     var config = {
-        type: 'horizontalBar',
+        type: 'bar',
 
         // Chart Options
         options : chartOptions,

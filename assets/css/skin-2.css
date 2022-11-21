@@ -1,0 +1,71 @@
+.header-navbar,
+.main-menu.menu-fixed.menu-light.menu-accordion.menu-shadow,
+.navbar-semi-light .navbar-header,
+.main-menu.menu-light .navigation{
+    background-color: #113975 !important;
+}
+
+.header-navbar.navbar-shadow{
+    box-shadow: none;
+}
+
+.header-navbar .navbar-header .navbar-brand .brand-text,
+.main-menu.menu-light .navigation li a,
+.main-menu.menu-light .navigation .navigation-header,
+.navbar-semi-light .navbar-nav .nav-link,
+.search_button i{
+    color: #FFFFFF !important;
+}
+
+.main-menu.menu-fixed.menu-light.menu-accordion.menu-shadow{
+    border: 0;
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .navbar .navbar-container{
+    border-left: 1px solid rgba(103, 227, 254, 0.1);
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a > i svg path,
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a > i svg ellipse,
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a > i svg rect,
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a > i svg circle{
+    stroke: #FFFFFF;
+}
+
+.ps-theme-dark > .ps-scrollbar-y-rail > .ps-scrollbar-y{
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar-semi-light .navbar-nav li .position-relative .form-control.input-lg{
+    background: #1B4A82;
+    border: 1px solid rgba(103, 227, 254, 0.2);
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+}
+.navbar-semi-light .navbar-nav li .position-relative .form-control.input-lg::placeholder{
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.form-control-position,
+.search_button{
+    height: 100%;
+    background-color: transparent !important;
+
+}
+
+.main-menu.menu-light .navigation li a.active{
+    background-color: #FFFFFF;
+    color: #215CA8 !important;
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a.active > i svg path,
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a.active > i svg ellipse,
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a.active > i svg rect,
+body.vertical-layout.vertical-menu.menu-expanded .main-menu .navigation > li > a.active > i svg circle{
+    stroke: #215CA8;
+}
+

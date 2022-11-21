@@ -7,6 +7,8 @@
     --danger-color: #F80202;
     --warning-color: #FF7A00;
     --success-color: #0D9E1C;
+    --black-color: #111111;
+    --blue-color: #01058A;
 }
 
 @font-face{
@@ -50,7 +52,7 @@ html {
 
 body {
     color: rgba(17, 17, 17, 0.7);
-    font-family: 'Montserrat-400';
+    font-family: 'Montserrat-500';
     font-size: 16px;
     line-height: 1.875;
     margin: 0;
@@ -67,6 +69,7 @@ h1, h2, h3, h4, h5, h6,
     line-height: 1.25;
     margin-bottom: 10px;
     margin-top: 0;
+    text-transform: capitalize;
 }                                 
 
 html body a {
@@ -167,6 +170,10 @@ html body .content .content-wrapper {
     font-size: 14px !important;
     line-height: 18px !important; 
 }
+.fs-18{
+    font-size: 18px !important;
+    line-height: 22px !important; 
+}
 .fs-20{
     font-size: 20px !important;
     line-height: 24px !important;
@@ -202,6 +209,9 @@ html body .content .content-wrapper {
 }
 .text-black{
     color: #111111 !important;
+}
+.text-blue{
+    color: var(--blue-color) !important;
 }
 
 .text-align-justify{
@@ -437,6 +447,11 @@ ul.d-flex li>img{
     margin-bottom: 30px;
 }
 
+.input-group.inline{
+    flex-direction: row;
+    gap: 40px;
+}
+
 .input-group label{
     display: inline-flex;
     margin-bottom: 15px;
@@ -447,15 +462,66 @@ ul.d-flex li>img{
     text-transform: capitalize;
 }
 
+.input-group.inline label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 0;
+    min-width: 40%;
+}
+
+.input-group.inline label small{
+    font-size: 12px;
+    line-height: 15px;
+    font-family: 'Montserrat-400';
+}
+
 .input-group input{
     width: 100%;
-    text-align: center;
-    height: 45px;
+    height: 50px;
     display: flex;
     align-items: center;
     padding: 0 16px;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    background: #F7F7F7;
+    border-radius: 6px;
+    border: 1px solid #F7F7F7;
+}
+
+.input-group.inline input{
+    max-width: 400px;
+}
+
+.input-group input::placeholder{
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.dropzone{
+    border: 1px solid #F7F7F7;
+    background: #F7F7F7;
+    border-radius: 6px;
+}
+
+.dropzone.dz-clickable .dz-message{
+    position: relative;
+    padding-top: 50px;
+}
+
+.dropzone.dz-clickable .dz-message::after{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    background-image: url("../images/svg/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .btn{
@@ -546,6 +612,118 @@ ul.d-flex li>img{
     border-bottom: 1px solid #215CA8;
     color: var(--primary-color);
 }
+
+.label{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    padding: 0 6px;
+    border-radius: 4px;
+    height: 18px;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: 'Montserrat-500';
+    text-transform: capitalize;
+}
+
+.label.label-primary{
+    background: #628DFB;
+    color: #FFFFFF;
+}
+
+.custom-radio{
+    position: relative;
+}
+
+.hidden-input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.custom-radio label{
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Montserrat-500';
+    color: var(--black-color);
+}
+
+.custom-radio.align-end label{
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 0;
+}
+
+.custom-radio label::before{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(17, 17, 17, 0.7);
+    background-color: #fff;
+    /* background: #18A804; */
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-radio.align-end label::before{
+    right: 0;
+    left: auto;
+}
+
+.custom-radio label::after{
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    background-image: url("../../assets/images/svg/check-mark.svg");
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-radio.align-end label::after{
+    right: 4px;
+    left: auto;
+}
+
+.custom-radio input:checked + label::before{
+    background-color: #18A804;
+    border-color: #18A804;
+}
+
+.custom-radio input:checked + label::after{
+    opacity: 1;
+}
+
+.card .card-title{
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Montserrat-600';
+    font-weight: normal;
+    letter-spacing: 0;
+    color: var(--black-color);
+}
 /* 
 --------------------------------------------------------------------------------
 	End Common Style
@@ -565,6 +743,7 @@ ul.d-flex li>img{
 .breadcrumb .breadcrumb-item a{
 	color: rgba(17, 17, 17, 0.5);
 	font-family: 'Montserrat-500';
+    text-transform: capitalize;
 }
 
 .breadcrumb .breadcrumb-item a:hover{
@@ -606,13 +785,66 @@ ul.d-flex li>img{
     border-bottom: 0;
 }
 
-.tab-content .owner-information li span{
+.tab-content .owner-information li span,
+.main-menu.menu-light .navigation li a{
     font-family: 'Montserrat-500';
 }
 
 .tab-content .owner-information li span:first-child{
     display: inline-flex;
     min-width: 25%;
+}
+
+.main-menu.menu-light .navigation li a{
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu.menu-light .navigation li a i svg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .main-menu{
+    width: 300px;
+}
+
+body.vertical-layout.vertical-menu.menu-expanded .content, 
+body.vertical-layout.vertical-menu.menu-expanded .footer,
+body.vertical-layout.vertical-menu.menu-expanded .navbar .navbar-container{
+    margin-left: 300px;
+}
+
+.centered-chart-title{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.centered-chart-title span{
+    font-size: 12px;
+    line-height: 15px;
+    color: #787878;
+}
+
+.centered-chart-title h3{
+    font-size: 32px;
+    line-height: 36px;
+    color: var(--primary-color);
+    font-family: 'Montserrat-600';
 }
 /* 
 --------------------------------------------------------------------------------
@@ -677,6 +909,263 @@ ul.d-flex li>img{
 /* 
 --------------------------------------------------------------------------------
 	End Newspace Style
+--------------------------------------------------------------------------------
+*/
+
+/* 
+--------------------------------------------------------------------------------
+	Start Owner Style
+--------------------------------------------------------------------------------
+*/
+.owner-label{
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.85rem;
+    background-color: transparent;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(103, 227, 254, 0.1);
+}
+
+.owner-label img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.owner-label .owner-overview{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    flex: 1;
+}
+
+.owner-label .owner-overview span:not(.label){
+    line-height: 20px;
+    font-family: 'Montserrat-500';
+    display: inline-flex;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+
+.owner-label .owner-overview small{
+    font-size: 10px;
+    line-height: 12px;
+    color: #FFFFFF;
+    display: inline-flex;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: 'Montserrat-300';
+}
+
+/* Start Owner Profile */
+.profile-image{
+    width: 102px;
+    height: 112px;
+    background: #D9D9D9;
+    border-radius: 8px;
+    padding: 4px 3px 3px;
+    position: relative;
+}
+
+.profile-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profile-image a{
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #696969;
+    border-radius: 10px;
+}
+
+.profile-image a img{
+    width: 24px;
+    height: 24px; 
+    object-fit: contain;
+}
+
+.profile-overview h4{
+    font-size: 20px;
+    line-height: 24px; 
+    color: var(--black-color);
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.info-list{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info-list li{
+    display: flex;
+    gap: 15px;
+}
+
+.info-list li span{
+    color: var(--black-color);
+}
+
+.info-list li span.title{
+    color: rgba(17, 17, 17, 0.5);
+    display: inline-flex;
+    min-width: 72px;
+}
+
+.time-pickers{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.time-pickers li{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.time-pickers li span.title{
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--black-color);
+    display: inline-flex;
+    min-width: 60px;
+}
+
+.time-pickers li .pickatime{
+    width: 120px;
+    font-size: 14px;
+    line-height: 17px;
+    border: 1px solid rgba(17, 17, 17, 0.3);
+    border-radius: 4px;
+    padding: 0 6px;
+    height: 30px;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.time-pickers li .pickatime::placeholder{
+    color: var(--black-color);
+    font-size: 14px;
+    line-height: 17px;
+}
+
+ul.time-pickers .picker--time{
+    min-width: unset;
+    width: 120px;
+}
+
+ul.documents{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+ul.documents li{
+    width: calc(50% - 25px);
+}
+
+ul.documents li{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(125, 136, 166, 0.2);
+    border-radius: 8px;
+}
+
+ul.documents li a img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+ul.documents li .documents-info{
+    flex: 1;
+    padding-left: 10px;
+}
+
+ul.documents li .documents-info .name{
+    display: block;
+    width: 100%;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-x: hidden;
+    color: var(--black-color);
+    margin-bottom: 5px;
+}
+
+ul.documents li .documents-info .type{
+    text-transform: uppercase;
+    color: #979797;
+}
+
+ul.branches {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+ul.branches li a{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(125, 136, 166, 0.2);
+    border-radius: 8px;
+}
+
+ul.branches li a>img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border: 1px solid rgba(125, 136, 166, 0.2);
+    border-radius: 8px;
+}
+
+ul.branches li a .flex-space .branch-info{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+ul.branches li a .flex-space .branch-info span{
+    color: #979797;
+}
+
+ul.branches li a .flex-space .branch-info .name{
+    color: var(--black-color);
+}
+
+ul.branches li a .flex-space svg{
+    width: 12px;
+    object-fit: contain;
+}
+
+.link-group li a svg{
+    margin-left: 15px;
+}
+/* End Owner Profile */
+/* 
+--------------------------------------------------------------------------------
+	End Owner Style
 --------------------------------------------------------------------------------
 */
 
@@ -994,4 +1483,3 @@ ul.d-flex li>img{
 	End Custom Padding--Margin Style
 --------------------------------------------------------------------------------
 */
-

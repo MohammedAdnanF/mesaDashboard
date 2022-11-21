@@ -1,4 +1,4 @@
-(function(window, undefined) {
+(function (window, undefined) {
   'use strict';
 
   $(window).on('click', function () {
@@ -8,6 +8,21 @@
   $('.slider-menu-bar').on('click', function (event) {
     event.stopPropagation();
     $(this).children('.slider-menu').fadeIn('fast');
+  });
+
+  // $(".pickatime").pickatime();
+
+  $(".number-tab-steps").steps({
+    headerTag: "h6",
+    bodyTag: "fieldset",
+    transitionEffect: "fade",
+    titleTemplate: '#index# #title#',
+    labels: {
+      finish: 'Submit'
+    },
+    onFinished: function (event, currentIndex) {
+      alert("Form submitted.");
+    }
   });
 
   /*

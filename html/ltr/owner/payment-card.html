@@ -14,22 +14,26 @@
   rel="stylesheet">
   <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css"
   rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/tables/datatable/datatables.min.css">
+  <!-- BEGIN Fontawesome CSS-->
+  <link rel="stylesheet" type="text/css" href="../../../assets/fonts/fontawesome/css/fontawesome.css">
+  <!-- END Fontawesome CSS-->
+  
   <!-- BEGIN VENDOR CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/pickers/pickadate/pickadate.css">
   <!-- END VENDOR CSS-->
   <!-- BEGIN MODERN CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css">
   <!-- END MODERN CSS-->
   <!-- BEGIN Page Level CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
   <!-- END Page Level CSS-->
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/mesa.css">
   <!-- BEGIN Custom CSS-->
   <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
   <!-- END Custom CSS-->
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/cryptocoins/cryptocoins.css">
-  <link rel="stylesheet" type="text/css" href="../../../app-assets/css/mesa.css">
-
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/skin-2.css">
 </head>
 <body class="vertical-layout vertical-menu 2-columns   menu-expanded fixed-navbar"
 data-open="click" data-menu="vertical-menu" data-col="2-columns">
@@ -41,7 +45,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
           <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
           <li class="nav-item">
             <a class="navbar-brand" href="index.html">
-              <img class="brand-logo" alt="modern admin logo" src="../../../app-assets/images/logo/logo.png">
+              <img class="brand-logo" alt="modern admin logo" src="../../../assets/images/logo-light.png">
               <h3 class="brand-text">Mesa</h3>
             </a>
           </li>
@@ -71,12 +75,11 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                     top: 1px;
                     right: 1px;
                     background: #ededed;">
-                    <button class="search_button" style="border: none; height: 10px;">
-                      <i class="la la-search" style="color: #215CA8;
-                      font-size: 18px;
-                      transform: rotate(266deg);"></i>
-                    </button>
-              
+                          <button class="search_button" style="border: none; height: 10px;">
+                            <i class="la la-search" style="color: #215CA8;
+                            font-size: 18px;
+                            transform: rotate(266deg);"></i>
+                          </button>
                     </div>
                   </fieldset>
                 </form>
@@ -190,152 +193,82 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
     </div>
   </nav>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
-  <div class="main-menu menu-fixed menu-light menu-accordion    menu-shadow " data-scroll-to-active="true">
+  <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow " data-scroll-to-active="true">
     <div class="main-menu-content">
+      <div class="owner-label">
+        <img src="../../../assets/images/owner.png" alt="">
+        <div class="owner-overview">
+          <span>Hilton hotel</span>
+          <small>member since aug 2022</small>
+          <span class="label label-primary">owner</span>
+        </div>
+      </div>
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-        <li class=" nav-item"><a href="dashboard.html"><i class="la la-home"></i><span class="menu-title" data-i18n="nav.dash.main">Dashboard</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
-
+        <li class=" nav-item"><a href="dashboard.html">
+            <i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4.00098V6.43998" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 13H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3 13H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.3601 6.64001L13.4041 11.596" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.981 11C13.086 11 13.981 11.895 13.981 13C13.981 14.105 13.086 15 11.981 15C10.876 15 9.98096 14.105 9.98096 13C9.98096 11.895 10.876 11 11.981 11" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5.63989 6.64001L7.75989 8.76001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16.24 17.24L18.36 19.36L18.364 19.364C21.879 15.849 21.879 10.151 18.364 6.63601C14.849 3.12101 9.15101 3.12101 5.63601 6.63601C2.12101 10.151 2.12101 15.849 5.63601 19.364L5.64001 19.36L7.64001 17.36" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </i>
+            <span class="menu-title" data-i18n="nav.dash.main">Dashboard</span><span class="badge badge badge-info badge-pill float-right mr-2">3</span></a>
         </li>
-        <li class=" nav-item"><a href="new_owner.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
-          <g id="Interface_Essential_user-profile-add-square" data-name="Interface, Essential/user-profile-add-square" transform="translate(0.005 0.005)">
-            <rect id="Interface_Essential_user-profile-add-square-2" data-name="Interface, Essential/user-profile-add-square" width="24" height="24" fill="none"/>
-            <g id="Group">
-              <path id="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
-              <g id="Group-2" data-name="Group">
-                <path id="Path-2" data-name="Path" d="M12.132,17.007H4a4,4,0,0,1-4-4V4A4,4,0,0,1,4,0h9a4,4,0,0,1,4,4v8.13" transform="translate(2.996 2.996)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                <path id="Path-3" data-name="Path" d="M3.843.66A2.251,2.251,0,1,1,.66.66a2.25,2.25,0,0,1,3.183,0Z" transform="translate(8.914 7.023)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                <path id="Path-4" data-name="Path" d="M0,1.888A2.9,2.9,0,0,1,2.711,0H5.624A2.864,2.864,0,0,1,7,.357" transform="translate(6.998 14.114)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                <path id="Path-5" data-name="Path" d="M2.5.5H0" transform="translate(17.752 18.567)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                <path id="Path-6" data-name="Path" d="M.5,0V2.5" transform="translate(18.503 17.816)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-                <path id="Path-7" data-name="Path" d="M4,0A4,4,0,1,1,0,4,4,4,0,0,1,4,0Z" transform="translate(15.001 15.001)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              </g>
-            </g>
-          </g>
-        </svg></i><span class="menu-title" data-i18n="nav.menu_levels.main">New Owner</span></a></li>
-        <li class=" nav-item"><a href="Newspace.html"><i><svg id="Interface_Essential_Grid_Layout_Add" data-name="Interface, Essential/Grid, Layout, Add" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Interface_Essential_Grid_Layout_Add-2" data-name="Interface, Essential/Grid, Layout, Add" width="24" height="24" fill="none"/>
-          <g id="Group">
-            <g id="Group-2" data-name="Group">
-              <path id="Path" d="M5,7H2A2,2,0,0,1,0,5V2A2,2,0,0,1,2,0H5A2,2,0,0,1,7,2V5A2,2,0,0,1,5,7Z" transform="translate(3 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-2" data-name="Path" d="M5,7H2A2,2,0,0,1,0,5V2A2,2,0,0,1,2,0H5A2,2,0,0,1,7,2V5A2,2,0,0,1,5,7Z" transform="translate(14 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-3" data-name="Path" d="M5,7H2A2,2,0,0,1,0,5V2A2,2,0,0,1,2,0H5A2,2,0,0,1,7,2V5A2,2,0,0,1,5,7Z" transform="translate(3 14)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-4" data-name="Path" d="M.5,5V0" transform="translate(17 15)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-5" data-name="Path" d="M5,.5H0" transform="translate(15 17)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            </g>
-            <rect id="Rectangle" width="24" height="24" transform="translate(24 24) rotate(180)" fill="none"/>
-          </g>
-        </svg>
-        </i><span class="menu-title" data-i18n="nav.menu_levels.main">New Space</span></a></li>
-        <li class=" nav-item"><a href="owner.html"><i><svg id="Office_Work_employees-square" data-name="Office, Work/employees-square" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Office_Work_employees-square-2" data-name="Office, Work/employees-square" width="24" height="24" fill="none"/>
-          <g id="Group">
-            <circle id="Oval" cx="2" cy="2" r="2" transform="translate(7.5 7.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-            <path id="Path" d="M0,0A2,2,0,0,1,2,2,2,2,0,0,1,0,4" transform="translate(9.5 7.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            <path id="Path-2" data-name="Path" d="M0,0A2,2,0,0,1,2,2,2,2,0,0,1,0,4" transform="translate(13.984 7.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            <path id="Path-3" data-name="Path" d="M0,0A2,2,0,0,1,2,2,2,2,0,0,1,0,4" transform="translate(13.984 7.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            <path id="Path-4" data-name="Path" d="M0,2A2,2,0,0,1,2,0H5A2,2,0,0,1,7,2" transform="translate(6 14)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            <path id="Path-5" data-name="Path" d="M0,0H1A2,2,0,0,1,3,2" transform="translate(15 14)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            <rect id="Rectangle" width="18" height="18" rx="5" transform="translate(3 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-            <rect id="Rectangle-2" data-name="Rectangle" width="24" height="24" transform="translate(0 0)" fill="none"/>
-          </g>
-        </svg>
-        </i><span class="menu-title" data-i18n="nav.menu_levels.main">Owner</span></a></li>
-        <li class=" nav-item"><a href="booking_table.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
-          <g id="Interface_Essential_calendar-chedule" data-name="Interface, Essential/calendar-chedule" transform="translate(0.005 0.005)">
-            <rect id="Interface_Essential_calendar-chedule-2" data-name="Interface, Essential/calendar-chedule" width="24" height="24" fill="none"/>
-            <g id="Group">
-              <rect id="Rectangle" width="18.007" height="18.007" rx="3" transform="translate(2.996 2.996)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
-              <path id="Path" d="M18.007.5H0" transform="translate(2.996 7.498)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-2" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(16.752 11)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-3" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(16.777 10.975)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-4" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(13.25 11)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-5" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(13.275 10.975)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-6" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(9.748 11)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-7" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(9.773 10.975)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-8" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(6.247 14.001)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-9" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(6.272 13.976)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-10" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(9.748 14.001)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-11" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(9.773 13.976)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-12" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(13.25 14.001)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-13" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(13.275 13.976)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-14" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(16.752 14.001)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-15" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(16.777 13.976)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-16" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(16.752 17.002)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-17" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(16.777 16.977)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-18" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(13.25 17.002)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-19" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(13.275 16.977)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-20" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(9.748 17.002)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-21" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(9.773 16.977)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-22" data-name="Path" d="M.55.5A.05.05,0,1,1,.5.45" transform="translate(6.247 17.002)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-23" data-name="Path" d="M.475.475a.05.05,0,0,1,.05.05" transform="translate(6.272 16.977)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-24" data-name="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
-            </g>
-          </g>
-        </svg>
-        </i><span class="menu-title" data-i18n="nav.menu_levels.main">Booking</span></a></li>
-        <li class=" nav-item"><a href="user_table.html"><i><svg id="User_User_Profile" data-name="User/User,Profile" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="User_User_Profile-2" data-name="User/User,Profile" width="24" height="24" fill="none"/>
-          <g id="Group">
-            <g id="Group-2" data-name="Group">
-              <path id="Path" d="M4.268.732a2.5,2.5,0,1,1-3.536,0,2.5,2.5,0,0,1,3.536,0Z" transform="translate(9.5 10.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-2" data-name="Path" d="M4.268.732a2.5,2.5,0,1,1-3.536,0,2.5,2.5,0,0,1,3.536,0Z" transform="translate(14.986 4.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-3" data-name="Path" d="M0,0A6.551,6.551,0,0,1,4,1.333" transform="translate(18 12.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-4" data-name="Path" d="M4.268.732a2.5,2.5,0,1,1-3.536,0,2.5,2.5,0,0,1,3.536,0Z" transform="translate(4.014 4.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-5" data-name="Path" d="M0,1.333A6.551,6.551,0,0,1,4,0" transform="translate(2 12.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-6" data-name="Path" d="M0,1.5A7.667,7.667,0,0,1,4.591,0,7.667,7.667,0,0,1,9.182,1.5" transform="translate(7.409 18.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            </g>
-            <path id="Path-7" data-name="Path" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
-          </g>
-        </svg>
-        </i><span class="menu-title" data-i18n="nav.menu_levels.main">Users</span></a></li>
-        <li class=" nav-item"><a href="space.html"><i><svg id="Interface_Essential_Grid_Layout" data-name="Interface, Essential/Grid, Layout" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Interface_Essential_Grid_Layout-2" data-name="Interface, Essential/Grid, Layout" width="24" height="24" fill="none"/>
-          <g id="Group">
-            <g id="Group-2" data-name="Group">
-              <path id="Path" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
-              <path id="Path-2" data-name="Path" d="M4.75,6.75H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H4.75a2,2,0,0,1,2,2V4.75A2,2,0,0,1,4.75,6.75Z" transform="translate(3 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-3" data-name="Path" d="M4.75,6.75H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H4.75a2,2,0,0,1,2,2V4.75A2,2,0,0,1,4.75,6.75Z" transform="translate(14.25 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-4" data-name="Path" d="M4.75,6.75H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H4.75a2,2,0,0,1,2,2V4.75A2,2,0,0,1,4.75,6.75Z" transform="translate(3 14.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-5" data-name="Path" d="M4.75,6.75H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H4.75a2,2,0,0,1,2,2V4.75A2,2,0,0,1,4.75,6.75Z" transform="translate(14.25 14.25)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            </g>
-          </g>
-        </svg>
+        <li class=" nav-item"><a href="new_owner.html" class="active">
+            <i>
+                <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 16H11" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.41422 9.58579C10.1953 10.3668 10.1953 11.6332 9.41422 12.4142C8.63317 13.1953 7.36684 13.1953 6.58579 12.4142C5.80474 11.6332 5.80474 10.3668 6.58579 9.58579C7.36684 8.80474 8.63317 8.80474 9.41422 9.58579" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M1 5.02197H13C14.105 5.02197 15 5.91697 15 7.02197V19C15 20.1 14.1 21 13 21H3C1.895 21 1 20.105 1 19V5.02197C1 4.60597 1.258 4.23297 1.647 4.08597L9.647 1.06497C10.301 0.81797 11 1.30197 11 2.00097V5.02197" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </i>
+            <span class="menu-title" data-i18n="nav.menu_levels.main">Manage booking</span></a></li>
+        <li class=" nav-item"><a href="Newspace.html">
+            <i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 21V4C17 3.448 16.552 3 16 3H8C7.448 3 7 3.448 7 4V21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 9H3C2.448 9 2 9.448 2 10V21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 21V10C22 9.448 21.552 9 21 9H17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.5 17H14.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M13.5 17V21" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.5 21V17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 10.5H14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 13.5H14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10 7.5H14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 13.5H7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M5 17H7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 13.5H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17 17H19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23 21H1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </i>
+            <span class="menu-title" data-i18n="nav.menu_levels.main">Branch</span></a></li>
+        <li class=" nav-item"><a href="booking_table.html"><i>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 9.75H5C3.895 9.75 3 8.855 3 7.75V5C3 3.895 3.895 3 5 3H7.75C8.855 3 9.75 3.895 9.75 5V7.75C9.75 8.855 8.855 9.75 7.75 9.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 9.75H16.25C15.145 9.75 14.25 8.855 14.25 7.75V5C14.25 3.895 15.145 3 16.25 3H19C20.105 3 21 3.895 21 5V7.75C21 8.855 20.105 9.75 19 9.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 21H5C3.895 21 3 20.105 3 19V16.25C3 15.145 3.895 14.25 5 14.25H7.75C8.855 14.25 9.75 15.145 9.75 16.25V19C9.75 20.105 8.855 21 7.75 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M19 21H16.25C15.145 21 14.25 20.105 14.25 19V16.25C14.25 15.145 15.145 14.25 16.25 14.25H19C20.105 14.25 21 15.145 21 16.25V19C21 20.105 20.105 21 19 21Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Space</span></a></li>
-        <li class=" nav-item"><a href="employeetabel.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
-          <g id="Office_Work_employees-presentation" data-name="Office, Work/employees-presentation" transform="translate(0.005 0.005)">
-            <rect id="Office_Work_employees-presentation-2" data-name="Office, Work/employees-presentation" width="24" height="24" fill="none"/>
-            <g id="Group">
-              <path id="Path" d="M2.989.513a1.751,1.751,0,1,1-2.476,0,1.751,1.751,0,0,1,2.476,0Z" transform="translate(10.249 14.287)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-2" data-name="Path" d="M2.989.513A1.751,1.751,0,1,1,1.751,0,1.751,1.751,0,0,1,2.989.513Z" transform="translate(14.751 9.785)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-3" data-name="Path" d="M0,10V2.251A2.251,2.251,0,0,1,2.251,0H15.757a2.251,2.251,0,0,1,2.251,2.251V10" transform="translate(2.996 2.996)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-4" data-name="Path" d="M0,0A4.914,4.914,0,0,1,3,1" transform="translate(17.002 16.002)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-5" data-name="Path" d="M3.5,1.751A1.751,1.751,0,1,1,1.751,0,1.751,1.751,0,0,1,3.5,1.751Z" transform="translate(5.747 9.999)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-6" data-name="Path" d="M0,.992A4.832,4.832,0,0,1,2.951.009" transform="translate(3.997 16.01)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-7" data-name="Path" d="M0,1A5,5,0,0,1,6,1" transform="translate(8.999 20.003)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-8" data-name="Path" d="M0,24.01V0H24.01V24.01" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
-            </g>
-          </g>
-        </svg>
+        <li class=" nav-item"><a href="user_table.html"><i>
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.238 15.7994C14.7387 16.3001 14.8885 17.0531 14.6175 17.7073C14.3465 18.3615 13.7082 18.7881 13 18.7881C12.2919 18.7881 11.6536 18.3615 11.3826 17.7073C11.1116 17.0531 11.2614 16.3001 11.7621 15.7994C12.4458 15.1157 13.5543 15.1157 14.238 15.7994" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.7399 11.2976C19.4236 11.9813 19.4236 13.0898 18.7399 13.7735C18.0562 14.4572 16.9477 14.4572 16.264 13.7735C15.5803 13.0898 15.5803 11.9813 16.264 11.2976C16.5923 10.9692 17.0376 10.7848 17.5019 10.7848C17.9663 10.7848 18.4116 10.9692 18.7399 11.2976" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M22.0038 14.0004V6.24715C22.0038 5.00399 20.9961 3.99622 19.7529 3.99622H6.24728C5.00412 3.99622 3.99634 5.00399 3.99634 6.24715V14.0004" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M18.0024 17.0017C19.0858 16.9952 20.1409 17.3469 21.0037 18.0021" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M10.249 12.7499C10.249 13.7168 9.46519 14.5006 8.49829 14.5006C7.53139 14.5006 6.74756 13.7168 6.74756 12.7499C6.74756 11.783 7.53139 10.9991 8.49829 10.9991C9.46519 10.9991 10.249 11.783 10.249 12.7499" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.99683 18.0021C5.8451 17.3582 6.88237 17.0125 7.94737 17.0189" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.0013 22.0037C14.2228 20.6698 11.7773 20.6698 9.99878 22.0037" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Employee Registration</span></a></li>
-        <li class=" nav-item"><a href="rolesTable.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
-          <g id="Office_Work_presentation-board" data-name="Office, Work/presentation-board" transform="translate(0.005 0.005)">
-            <rect id="Office_Work_presentation-board-2" data-name="Office, Work/presentation-board" width="24" height="24" fill="none"/>
-            <g id="Group">
-              <path id="Path" d="M7,3H.5A.5.5,0,0,1,0,2.5V2.095A2.1,2.1,0,0,1,2.095,0H5.408A2.1,2.1,0,0,1,7.5,2.095V2.5A.5.5,0,0,1,7,3Z" transform="translate(14.501 18.003)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-2" data-name="Path" d="M2,4A2,2,0,1,1,2,4Z" transform="translate(16.256 11.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-3" data-name="Path" d="M8,16.007H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0H16.007a2,2,0,0,1,2,2V6" transform="translate(2.996 2.996)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-4" data-name="Path" d="M0,.5H7" transform="translate(6.998 7.498)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-5" data-name="Path" d="M0,.5H4" transform="translate(6.998 11.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-6" data-name="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
-            </g>
-          </g>
-        </svg>
-        </i><span class="menu-title" data-i18n="nav.menu_levels.main">Roles</span></a></li>
         <li class=" nav-item"><a href="earning.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
           <g id="Money_coint-growth" data-name="Money/coint-growth" transform="translate(0.005 0.005)">
-            <rect id="Money_coint-growth-2" data-name="Money/coint-growth" width="24" height="24" fill="none"/>
             <g id="Group">
-              <path id="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M10,0c0,1.105-2.239,2-5,2s-5-.9-5-2" transform="translate(2.997 8.999)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M5,2c-2.762,0-5-.9-5-2" transform="translate(2.997 13)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-4" data-name="Path" d="M.5,0h0V6" transform="translate(12.5 4.997)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -346,14 +279,12 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
               <path id="Path-8" data-name="Path" d="M.5,0V12.005" transform="translate(2.496 4.997)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-9" data-name="Path" d="M.5,0V5" transform="translate(17.502 4.997)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-10" data-name="Path" d="M0,2,2,0,4,2" transform="translate(16.002 4.997)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-11" data-name="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
             </g>
           </g>
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Earning</span></a></li>
         <li class=" nav-item"><a href="report_earning.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
           <g id="Money_checklist-coins-square" data-name="Money/checklist-coins-square" transform="translate(0.005 0.005)">
-            <rect id="Money_checklist-coins-square-2" data-name="Money/checklist-coins-square" width="24" height="24" fill="none"/>
             <g id="Group">
               <path id="Path" d="M0,.5H4" transform="translate(13 8.499)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M2.77,0,.919,1.667,0,.838" transform="translate(6.998 7.886)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -362,7 +293,6 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
               <path id="Path-5" data-name="Path" d="M7,0V5.7c0,.773-1.567,1.4-3.5,1.4S0,6.476,0,5.7V0" transform="translate(14.001 13.901)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-6" data-name="Path" d="M7,0C7,.773,5.434,1.4,3.5,1.4S0,.773,0,0" transform="translate(14.002 16.752)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-7" data-name="Path" d="M0,1.4C0,.627,1.568,0,3.5,0S7,.626,7,1.4,5.435,2.8,3.5,2.8,0,2.174,0,1.4" transform="translate(14.001 12.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="Path-8" data-name="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
             </g>
           </g>
         </svg>
@@ -383,9 +313,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Fee</span></a></li>
         <li class=" nav-item"><a href="TAX&COMISSION.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
           <g id="Money_money-banknote-bank" data-name="Money/money-banknote-bank" transform="translate(0.005 0.005)">
-            <rect id="Money_money-banknote-bank-2" data-name="Money/money-banknote-bank" width="24" height="24" fill="none"/>
             <g id="Group">
-              <rect id="Rectangle" width="24.01" height="24.01" transform="translate(-0.005 -0.005)" fill="none"/>
               <path id="Path" d="M.5,4.582V0" transform="translate(13.501 16.422)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M.5,4.582V0" transform="translate(16.502 16.422)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M.5,4.582V0" transform="translate(19.503 16.422)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -400,13 +328,11 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Tax</span></a></li>
         <li class=" nav-item"><a href="ads.html"><i><svg id="Interface_Essential_horn-trumpet" data-name="Interface, Essential/horn-trumpet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Interface_Essential_horn-trumpet-2" data-name="Interface, Essential/horn-trumpet" width="24" height="24" fill="none"/>
           <g id="Group">
             <rect id="Rectangle" width="18" height="18" rx="5" transform="translate(3 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
             <path id="Path" d="M3.022.024l.626,1.59a1.4,1.4,0,0,1-1.3,1.91h0a1.4,1.4,0,0,1-1.3-.883L0,0" transform="translate(8.704 13.476)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
             <path id="Path-2" data-name="Path" d="M0,1.5,2.521.122A1,1,0,0,1,4,1V7a1,1,0,0,1-1.479.878L0,6.5" transform="translate(13 7.001)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
             <path id="Path-3" data-name="Path" d="M2,0H6V5H2A2,2,0,0,1,0,3V2A2,2,0,0,1,2,0Z" transform="translate(7 8.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-            <rect id="Rectangle-2" data-name="Rectangle" width="24" height="24" transform="translate(0 0)" fill="none"/>
           </g>
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Adds</span></a></li>
@@ -415,10 +341,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
           data-placement="right" data-original-title="Forms"></i>
         </li>
         <li class=" nav-item"><a href="application.html"><i><svg id="Computers_Devices_Electronics_Iphone_Mobile_Phone" data-name="Computers, Devices, Electronics/Iphone, Mobile, Phone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Computers_Devices_Electronics_Iphone_Mobile_Phone-2" data-name="Computers, Devices, Electronics/Iphone, Mobile, Phone" width="24" height="24" fill="none"/>
           <g id="Group">
             <g id="Group-2" data-name="Group">
-              <path id="Path" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M10,18H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0h8a2,2,0,0,1,2,2V16A2,2,0,0,1,10,18Z" transform="translate(6 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M.75.5A.25.25,0,1,1,.5.25.25.25,0,0,1,.75.5Z" transform="translate(11.5 17)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-4" data-name="Path" d="M0,.5H2.5" transform="translate(10.75 5.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -433,15 +357,9 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
           </g>
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Language </span></a></li>
-        <li class=" nav-item"><a href="CURRENCY.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="13" height="27" viewBox="0 0 13 27">
-          <text id="_" data-name="$" fill="#111" font-size="20" font-family="SegoeUI, Segoe UI"><tspan x="0" y="22">$</tspan></text>
-        </svg>
-        </i><span class="menu-title" data-i18n="nav.menu_levels.main">Currency  </span></a></li>
         <li class=" nav-item"><a href="payment.html"><i><svg id="Money_Wallet" data-name="Money/Wallet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Money_Wallet-2" data-name="Money/Wallet" width="24" height="24" fill="none"/>
           <g id="Group">
             <g id="Group-2" data-name="Group">
-              <path id="Path" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M.75.5A.25.25,0,1,1,.5.25.25.25,0,0,1,.75.5Z" transform="translate(13 13.23)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M0,3.283V3A3,3,0,0,1,3,0H15a3,3,0,0,1,3,3v9a3,3,0,0,1-3,3H14" transform="translate(3 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-4" data-name="Path" d="M4,.5H0" transform="translate(17 8.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -451,10 +369,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Payment Method </span></a></li>
         <li class=" nav-item"><a href="about_us.html"><i><svg id="Interface_Essential_Infornation_Info" data-name="Interface, Essential/Infornation, Info" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Interface_Essential_Infornation_Info-2" data-name="Interface, Essential/Infornation, Info" width="24" height="24" fill="none"/>
           <g id="Group">
             <g id="Group-2" data-name="Group">
-              <path id="Path" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M.75.5A.25.25,0,1,1,.5.25.25.25,0,0,1,.75.5Z" transform="translate(11.5 7.75)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M9,18H9A9,9,0,0,1,0,9H0A9,9,0,0,1,9,0H9a9,9,0,0,1,9,9h0A9,9,0,0,1,9,18Z" transform="translate(3 3)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-4" data-name="Path" d="M.5,5V0" transform="translate(11.5 12)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -482,22 +398,18 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Privacy Policy</span></a></li>
         <li class=" nav-item"><a href="report.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
           <g id="Interface_Essential_headphones-circle" data-name="Interface, Essential/headphones-circle" transform="translate(0.005 0.005)">
-            <rect id="Interface_Essential_headphones-circle-2" data-name="Interface, Essential/headphones-circle" width="24" height="24" fill="none"/>
             <g id="Group">
               <rect id="Rectangle" width="3.047" height="4.002" rx="1.25" transform="translate(7.031 11.967)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
               <rect id="Rectangle-2" data-name="Rectangle" width="3.047" height="4.002" rx="1.25" transform="translate(13.923 11.967)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
               <path id="Path" d="M0,7V4.969A4.969,4.969,0,0,1,4.969,0h0A4.969,4.969,0,0,1,9.938,4.969V7" transform="translate(7.031 6.998)" fill="none" stroke="#111" stroke-width="1.5" fill-rule="evenodd"/>
               <circle id="Oval" cx="9.004" cy="9.004" r="9.004" transform="translate(2.996 2.996)" fill="none" stroke="#111" stroke-width="1.5"/>
-              <path id="Path-2" data-name="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
             </g>
           </g>
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Report</span></a></li>
         <li class=" nav-item"><a href="rating.html"><i><svg xmlns="http://www.w3.org/2000/svg" width="24.01" height="24.01" viewBox="0 0 24.01 24.01">
           <g id="Interface_Essential_star-favorite-menu" data-name="Interface, Essential/star-favorite-menu" transform="translate(0.005 0.005)">
-            <rect id="Interface_Essential_star-favorite-menu-2" data-name="Interface, Essential/star-favorite-menu" width="24" height="24" fill="none"/>
             <g id="Group">
-              <path id="Path" d="M0,0H24.01V24.01H0Z" transform="translate(-0.005 -0.005)" fill="none" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M6.532.5H0" transform="translate(14.472 17.502)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M6.532.5H0" transform="translate(14.472 14.501)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-4" data-name="Path" d="M4.355.5H0" transform="translate(14.472 20.504)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -507,10 +419,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Rating App </span></a></li>
         <li class=" nav-item"><a href="notification_template.html"><i><svg id="Interface_Essential_Bell_Notifications" data-name="Interface, Essential/Bell, Notifications" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Interface_Essential_Bell_Notifications-2" data-name="Interface, Essential/Bell, Notifications" width="24" height="24" fill="none"/>
           <g id="Group">
             <g id="Group-2" data-name="Group">
-              <path id="Path" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M3.2.5H0" transform="translate(10.4 19.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M12,7.5a.857.857,0,0,0,.472.765l.5.251A1.854,1.854,0,0,1,14,10.178h0a1.854,1.854,0,0,1-1.854,1.854H1.854A1.854,1.854,0,0,1,0,10.178H0A1.857,1.857,0,0,1,1.025,8.519l.5-.251A.855.855,0,0,0,2,7.5V5H2A5,5,0,0,1,7,0H7a5,5,0,0,1,5,5h0V7.5Z" transform="translate(5 5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
             </g>
@@ -518,10 +428,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Notification Templates</span></a></li>
         <li class=" nav-item"><a href="payment.html"><i><svg id="Interface_Essential_Group_Elements_Square" data-name="Interface, Essential/Group, Elements, Square" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Interface_Essential_Group_Elements_Square-2" data-name="Interface, Essential/Group, Elements, Square" width="24" height="24" fill="none"/>
           <g id="Group">
             <g id="Group-2" data-name="Group">
-              <path id="Path" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M0,1.667H0A1.667,1.667,0,0,1,1.667,0h0A1.667,1.667,0,0,1,3.334,1.667h0A1.667,1.667,0,0,1,1.667,3.334h0A1.668,1.668,0,0,1,0,1.667Z" transform="translate(10.333 7)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M0,1.667H0A1.667,1.667,0,0,1,1.667,0h0A1.667,1.667,0,0,1,3.334,1.667h0A1.668,1.668,0,0,1,1.667,3.334h0A1.667,1.667,0,0,1,0,1.667Z" transform="translate(6.293 13.666)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-4" data-name="Path" d="M0,1.667H0A1.667,1.667,0,0,1,1.667,0h0A1.667,1.667,0,0,1,3.334,1.667h0A1.667,1.667,0,0,1,1.667,3.334h0A1.667,1.667,0,0,1,0,1.667Z" transform="translate(14.373 13.666)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
@@ -534,14 +442,11 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
         </svg>
         </i><span class="menu-title" data-i18n="nav.menu_levels.main">Extensions</span></a></li>
         <li class=" nav-item"><a href="Login_v13/sign_in.html"><i><svg id="Interface_Essential_Sign_Out_Right" data-name="Interface, Essential/Sign Out, Right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <rect id="Interface_Essential_Sign_Out_Right-2" data-name="Interface, Essential/Sign Out, Right" width="24" height="24" fill="none"/>
           <g id="Group">
             <g id="Group-2" data-name="Group">
-              <path id="a" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
               <path id="Path" d="M0,.5H10.14" transform="translate(9.86 11.5)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-2" data-name="Path" d="M6.335,15.981,2.167,16A2.146,2.146,0,0,1,0,13.865V2.135A2.146,2.146,0,0,1,2.157,0H6.471" transform="translate(4.529 4)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
               <path id="Path-3" data-name="Path" d="M0,0,4,4,0,8" transform="translate(16 8)" fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
-              <path id="a-2" data-name="a" d="M0,0H24V24H0Z" transform="translate(0 0)" fill="none" fill-rule="evenodd"/>
             </g>
           </g>
         </svg>
@@ -552,269 +457,91 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
   </div>
   <div class="app-content content">
     <div class="content-wrapper">
-      <div class="content-header row">
+      <div class="content-header">
+        <div class="breadcrumbs-top">
+          <div class="breadcrumb-wrapper">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a href="index.html" class="text-primary">Dashboard</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="index.html">profile</a>
+              </li>
+              <li class="breadcrumb-item active">Payment Card</li>
+            </ol>
+          </div>
+        </div>   
       </div>
       <div class="content-body">
-        <div id="crypto-stats-3" class="row">
-          <div class="col-xl-3 col-12">
-            <div class="card crypto-card-3 pull-up" style="background-color:#F9F0FF  ;  border-radius: 9px;">
-              <div class="card-content">
-                <div class="card-body pb-0">
-                  <div class="row">
-
-                    <div class="col-12 pl-2">
-                      <h4>Users</h4>
-                    </div>
-                    <div class="col-12 text-left mb-2">
-                      <div class="row">
-                        <div class="col-auto"> <h4>$9,980</h4></div>
-                        <div class="col-auto mb-2"><span class="success darken-4">31% <i class="la la-arrow-up"></i></span>
-                        </div>
-                        <div class="col-lg-12">
-                          <h6 class="text-muted">Compared to (2.251 last month)</h6>
-
-                        </div>
-                      </div>
-                     
-                    </div>
-                  </div>
+        <div class="card">
+          <div class="card-content">
+            <div class="card-body">
+                <div class="flex-space mb-30">
+                    <h2 class="card-title mb-0">Payment Card</h2>
+                    <a href="edit-payment-card.html" class="btn btn-transparent">
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3811 5.61828V5.61828C19.2095 6.44721 19.2095 7.7906 18.3811 8.61953L8.38992 18.6107C8.13353 18.8671 7.81229 19.049 7.46054 19.1369L3.99609 20.0033L4.86245 16.5388C4.95041 16.1871 5.1323 15.8658 5.38867 15.6094L15.3808 5.61828C16.2094 4.79 17.5525 4.79 18.3811 5.61828Z" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M16.5013 10.4993L13.5 7.49805" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M22.0034 19.0024L20.9089 20.0969C19.7002 21.3053 17.7408 21.3053 16.5321 20.0969V20.0969C15.3219 18.8911 13.3645 18.8911 12.1543 20.0969" stroke="#111111" stroke-opacity="0.71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Edit 
+                    </a>
                 </div>
-            
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-12">
-            <div class="card crypto-card-3 pull-up" style="background-color:#FFF2E9  ; color: #1F115C; border-radius: 9px;">
-              <div class="card-content">
-                <div class="card-body pb-0">
-                  <div class="row">
-
-                    <div class="col-12 pl-2">
-                      <h4>Owner</h4>
-                    </div>
-                    <div class="col-12 text-left mb-2">
-                      <div class="row">
-                        <div class="col-auto"> <h4>$9,980</h4></div>
-                        <div class="col-auto mb-2"><span class="success darken-4">31% <i class="la la-arrow-up"></i></span>
-                        </div>
-                        <div class="col-lg-12">
-                          <h6 class="text-muted">Compared to (2.251 last month)</h6>
-
-                        </div>
-                      </div>
-                     
-                    </div>
-                  </div>
+                <div class="input-group inline">
+                    <label for="">
+                        Bank Name
+                        <small>Enter your Bank account name</small>
+                    </label>
+                    <input type="text" name="" id="" readonly value="GB82 WEST ">
                 </div>
-            
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-12">
-            <div class="card crypto-card-3 pull-up" style="background-color:#F6FFEE  ; color: #1F115C; border-radius: 9px;">
-              <div class="card-content">
-                <div class="card-body pb-0">
-                  <div class="row">
-
-                    <div class="col-12 pl-2">
-                      <h4>Total Earning</h4>
-                    </div>
-                    <div class="col-12 text-left mb-2">
-                      <div class="row">
-                        <div class="col-auto"> <h4>$9,980</h4></div>
-                        <div class="col-auto mb-2"><span class="success darken-4">31% <i class="la la-arrow-up"></i></span>
-                        </div>
-                        <div class="col-lg-12">
-                          <h6 class="text-muted">Compared to (2.251 last month)</h6>
-
-                        </div>
-                      </div>
-                     
-                    </div>
-                  </div>
+                <div class="input-group inline">
+                    <label for="">
+                        account Name
+                        <small>Enter your Bank account name</small>
+                    </label>
+                    <input type="text" name="" id="" readonly value="Ahmed Ahmed">
                 </div>
-            
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-12">
-            <div class="card crypto-card-3 pull-up" style="background-color:#F1F5FF  ; color: #1F115C; border-radius: 9px;">
-              <div class="card-content">
-                <div class="card-body pb-0">
-                  <div class="row">
-
-                    <div class="col-12 pl-2">
-                      <h4>Total Booking</h4>
-                    </div>
-                    <div class="col-12 text-left mb-2">
-                      <div class="row">
-                        <div class="col-auto"> <h4>$9,980</h4></div>
-                        <div class="col-auto mb-2"><span class="success darken-4">31% <i class="la la-arrow-up"></i></span>
-                        </div>
-                        <div class="col-lg-12">
-                          <h6 class="text-muted">Compared to (2.251 last month)</h6>
-
-                        </div>
-                      </div>
-                     
-                    </div>
-                  </div>
+                <div class="input-group inline">
+                    <label for="">
+                        IBAN Number
+                        <small>Enter 16 digit card number on the card </small>
+                    </label>
+                    <input type="text" name="" id="" readonly value="2154    -    2536    -    5215    -    8967   ">
                 </div>
-            
-              </div>
+                <div class="input-group inline">
+                    <label for="">
+                        Bank Number
+                        <small>Enter the 7-digit card number on the card</small>
+                    </label>
+                    <input type="text" name="" id="" readonly value="89765432">
+                </div>
             </div>
           </div>
         </div>
-        <!-- Candlestick Multi Level Control Chart -->
-        <!-- Combo Bar Line Chart -->
-        <div class="row">
-          <div class="col-6">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">overview</h4>
-                <div class="row mt-2">
-                    <div class="col ">
-                      <h4 class="earning_chart_title">Earning</h4>
-                      <h2 class="earning_chart">$5.222</h2>
-                    </div>
-                    <div class="col">
-                      <h4 class="earning_chart_title">Booking</h4>
-                      <h2 class="booking_chart">$5.222</h2>
-                    </div>
-                </div>
-                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                <div class="heading-elements">
-                  <ul class="list-inline mb-0">
-                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                    <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
-                    <li><a data-action="close"><i class="ft-x"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card-content collapse show">
-                <div class="card-body chartjs">
-                  <canvas id="combo-bar-line" height="400"></canvas>
-                </div>
-              </div>
-            </div>
-            <!-- Sell Orders & Buy Order -->
-            <div class="match-height">
-              <div class="card">
-                <div class="card-header">
-                  <h4 class="card-title">latest owner</h4>
-                  <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-          
-                </div>
-                <div class="card-content">
-                  <div class="table-responsive">
-                    <table class="table table-de mb-0 laste_owner_table">
-        
-                      <tbody>
-              
-                        <tr class="mb-2">
-                          <td>Hilton Hotel</td>
-                          <td class="text-center "><span class="orange_bg">pinding</span></td>
-                          <td>5 Apr 2016</td>
-                        </tr>
-                        <tr class="mb-2">
-                          <td>Hilton Hotel</td>
-                          <td class="text-center "><span class="green_bg">Accepted</span></td>                        <td>5 Apr 2016</td>
-                        </tr>
-                        <tr class="mb-2">
-                          <td>Hilton Hotel</td>
-                          <td class="text-center "><span class="orange_bg">pinding</span></td>                        <td>5 Apr 2016</td>
-                        </tr>
-        
-                
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--/ Sell Orders & Buy Order -->
-          </div>
-          <!-- Simple Doughnut Chart -->
-          <div class="col-md-6 col-sm-12">
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Most Booking business</h4>
-                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
-                <div class="heading-elements">
-                  <ul class="list-inline mb-0">
-                    <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
-                    <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
-                    <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
-                    <li><a data-action="close"><i class="ft-x"></i></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card-content collapse show">
-                <div class="card-body">
-                  <canvas id="simple-doughnut-chart" height="400"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-content collapse show">
-                <div class="card-body chartjs position-relative">
-                  <canvas id="half-doughnut-chart" height="400"></canvas>
-                  <div class="centered-chart-title">
-                    <span>Total bookings</span>
-                    <h3>10.552</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--/ Trade History & Place Order -->
-
-        <!-- Active Orders -->
       </div>
     </div>
   </div>
   <!-- ////////////////////////////////////////////////////////////////////////////-->
-  <footer class="footer footer-static footer-light navbar-border navbar-shadow">
-    <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
-      <span class="float-md-left d-block d-md-inline-block">Copyright &copy; 2018 <a class="text-bold-800 grey darken-2" href="https://themeforest.net/user/pixinvent/portfolio?ref=pixinvent"
-        target="_blank">PIXINVENT </a>, All rights reserved. </span>
-      <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
-    </p>
-  </footer>
   <!-- BEGIN VENDOR JS-->
   <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
-
   <!-- BEGIN VENDOR JS-->
   <!-- BEGIN PAGE VENDOR JS-->
   <!-- END PAGE VENDOR JS-->
   <!-- BEGIN MODERN JS-->
+  <script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
+
   <script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
   <script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>
   <script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
   <!-- END MODERN JS-->
   <!-- BEGIN PAGE LEVEL JS-->
-  <script src="../../../app-assets/js/scripts/extensions/block-ui.js" type="text/javascript"></script>
-  <!-- END PAGE LEVEL JS-->
-  <script src="../../../app-assets/js/scripts/charts/chartjs/advance/bubble.js" type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/advance/combo-bar-line.js"
-  type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/advance/combo-bar-line-data-label.js"
-  type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/advance/different-point-sizes.js"
-  type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/pie-doughnut/pie.js" type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/pie-doughnut/pie-simple.js"
-  type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/pie-doughnut/half-doughnut.js"
-  type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/pie-doughnut/doughnut.js"
-  type="text/javascript"></script>
-  <script src="../../../app-assets/js/scripts/charts/chartjs/pie-doughnut/doughnut-simple.js"
-  type="text/javascript"></script>
-  <script src="../../../app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>
-
-  <!-- END PAGE LEVEL JS-->
+  <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+  <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+  <script src="../../../app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+  <script src="../../../app-assets/js/scripts/tables/datatables/datatable-basic.js"
+  type="text/javascript"></script>  <!-- END PAGE LEVEL JS-->
+  <!-- BEGIN Custom JS-->
+  <script src="../../../assets/js/scripts.js" type="text/javascript"></script>
+  <!-- End Custom JS-->
 </body>
 </html>
