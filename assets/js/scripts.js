@@ -16,13 +16,22 @@
     headerTag: "h6",
     bodyTag: "fieldset",
     transitionEffect: "fade",
-    titleTemplate: '#index# #title#',
+    titleTemplate: '#index#',
     labels: {
       finish: 'Submit'
     },
     onFinished: function (event, currentIndex) {
       alert("Form submitted.");
     }
+  });
+
+  $(".select2").select2();
+  $(".select2.no-search").select2({
+    minimumResultsForSearch: -1
+  });
+
+  $('.icheck').iCheck({
+    checkboxClass: 'icheckbox',
   });
 
   /*

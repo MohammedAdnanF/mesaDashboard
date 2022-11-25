@@ -10,7 +10,7 @@ $(window).on("load", function(){
         responsiveAnimationDuration:500,
         maintainAspectRatio: false,
         layout: {
-            padding: 30
+            padding: 40
         },
         plugins: {
             legend: {
@@ -24,7 +24,7 @@ $(window).on("load", function(){
         labels: ["Training Space", "Study Space", "Office Space", "Business Dinner Space", "Work Station Space", "Workshop Space", "Buffet Space", "Meeting Space"],
         datasets: [{
             label: "My First dataset",
-            data: [20, 33, 40, 30, 50, 35, 15, 45],
+            data: [0, 0, 0, 0, 0, 0, 0, 100],
             backgroundColor: ['#005CFF', '#C3D9FF', '#EAF1FF','#7195D5', '#4781E8', '#B3D5FF', '#063791', '#325594',],
             borderColor: ['#005CFF', '#C3D9FF', '#EAF1FF','#7195D5', '#4781E8', '#B3D5FF', '#063791', '#325594',],
             cutout: '60%',
@@ -40,40 +40,41 @@ $(window).on("load", function(){
             chart.data.datasets.forEach((dataset, i) => {
                 chart.getDatasetMeta(i).data.forEach((datapoint, index) => {
                     const {x, y} = datapoint.tooltipPosition();
-                    console.log(dataset);
-                    // Draw Line
-                    const halfWidth = width / 2;
-                    const halfHeight = height / 2;
+                    if(dataset.data[index] != 0){
+                        // Draw Line
+                        const halfWidth = width / 2;
+                        const halfHeight = height / 2;
 
-                    const xLine = x >= halfWidth ? x + 40 : x - 40;
-                    const yLine = y >= halfHeight ? y + 40 : y - 40;
-                    const extraLine = x >= halfWidth ? 35 : -35;
+                        const xLine = x >= halfWidth ? x + 40 : x - 40;
+                        const yLine = y >= halfHeight ? y + 40 : y - 40;
+                        const extraLine = x >= halfWidth ? 35 : -35;
 
-                    ctx.setLineDash([3, 3]);
-                    ctx.beginPath();
-                    ctx.moveTo(x, y);
-                    ctx.lineTo(xLine, yLine);
-                    ctx.lineTo(xLine + extraLine, yLine);
-                    ctx.strokeStyle = '#CDCDCD';
-                    ctx.lineWidth = 2;
-                    ctx.stroke();
+                        ctx.setLineDash([3, 3]);
+                        ctx.beginPath();
+                        ctx.moveTo(x, y);
+                        ctx.lineTo(xLine, yLine);
+                        ctx.lineTo(xLine + extraLine, yLine);
+                        ctx.strokeStyle = '#CDCDCD';
+                        ctx.lineWidth = 2;
+                        ctx.stroke();
 
-                    // Text
-                    const textWidth = ctx.measureText(chart.data.labels[index]).width;
-                    
-                    // Text Position
-                    const textXPosition = x >= halfWidth ? 'left' : 'right';
-                    const minusPx = x >= halfWidth ? -15 : 15;
-                    const plusPx = x >= halfWidth ? textWidth/2 - 26 : -textWidth/2 + 26;
+                        // Text
+                        const textWidth = ctx.measureText(chart.data.labels[index]).width;
+                        
+                        // Text Position
+                        const textXPosition = x >= halfWidth ? 'left' : 'right';
+                        const minusPx = x >= halfWidth ? -15 : 15;
+                        const plusPx = x >= halfWidth ? textWidth/2 - 26 : -textWidth/2 + 26;
 
-                    ctx.textAlign = textXPosition;
-                    ctx.textBaseline = 'middle'
+                        ctx.textAlign = textXPosition;
+                        ctx.textBaseline = 'middle'
 
-                    ctx.font = '12px Arial';
-                    ctx.fillStyle = "#111111";
-                    ctx.fillText(chart.data.labels[index], xLine + extraLine + minusPx, yLine + 19);
-                    ctx.fillStyle = "#18A804";
-                    ctx.fillText(dataset.data[index] + '%', xLine + extraLine + plusPx, yLine);
+                        ctx.font = '12px Arial';
+                        ctx.fillStyle = "#111111";
+                        ctx.fillText(chart.data.labels[index], xLine + extraLine + minusPx, yLine + 19);
+                        ctx.fillStyle = "#18A804";
+                        ctx.fillText(dataset.data[index] + '%', xLine + extraLine + plusPx, yLine);
+                    }
                 })
             })
         }
