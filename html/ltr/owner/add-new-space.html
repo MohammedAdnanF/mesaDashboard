@@ -21,8 +21,10 @@
   
   <!-- BEGIN VENDOR CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/dropzone.min.css">
   <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/pickers/pickadate/pickadate.css">
   <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/selects/select2.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/modal/sweetalert.css">
   <!-- END VENDOR CSS-->
   <!-- BEGIN MODERN CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css">
@@ -479,13 +481,35 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
             <div class="card-body">
               <div class="form-wizard">
                 <form action="#" class="number-tab-steps wizard-circle">
-                  <!-- <h6>Step 1</h6>
+                  <h6>Step 1</h6>
                   <fieldset>
                     <div class="form-group">
-                      <div class="image-uplaod">
+                      <div class="image-uplaod mb-30">
                         <h4>image space</h4>
-                        <ul class="drop-group">
+                        <ul class="drop-group mb-10">
+                          <li>
                             <label for="">Image 1*</label>
+                            <div class="dropzone single-file full-preview">
+                              <div class="position-relative">
+                                <input type="file" name="image1" class="hidden-input">
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <label for="">Image 2*</label>
+                            <div class="dropzone single-file full-preview">
+                              <div class="position-relative">
+                                <input type="file" name="image2" class="hidden-input">
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <label for="">Image 3*</label>
+                            <div class="dropzone single-file full-preview">
+                              <div class="position-relative">
+                                <input type="file" name="image3" class="hidden-input">
+                              </div>
+                            </div>
                           </li>
                         </ul>
                         <span class="text-danger">You can add a maximum of 3 photos *</span>
@@ -544,11 +568,11 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                         </div>
                       </div>
                     </div>
-                  </fieldset> -->
+                  </fieldset>
                   <h6>Step 2</h6>
                   <fieldset>
                     <div class="form-group">
-                      <div class="checkbox-list w-40">
+                      <div class="checkbox-list w-40 mb-30">
                         <h4 class="fs-16 mb-30 text-black text-medium">Facilities Equipped</h4>
                         <ul>
                           <li>
@@ -626,22 +650,77 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                           </li>
                         </ul>
                       </div>
-                      <div class="checkbox-list w-40">
+                      <div class="checkbox-list">
                         <h4 class="fs-16 mb-30 text-black text-medium">Facilities Equipped</h4>
                         <ul>
                           <li class="bordered">
                             <div class="custom-checkbox align-end">
-                              <input type="checkbox" name="" id="checkbox_7" class="hidden-input">
-                              <label for="checkbox_7">
+                              <input type="checkbox" name="" id="checkbox_9" class="followup-content hidden-input">
+                              <label for="checkbox_9" class="collapsed w-40" data-toggle="collapse" href="#collapse_2" role="button" aria-expanded="false" aria-controls="collapseExample">
                                 <img src="../../../assets/images/svg/food-icon.svg" alt="">
                                 Food
                               </label>
                             </div>
-                            <div class="form-wrap">
-                              <button class="btn-text">
-                                <img src="../../../assets/images/svg/deploy.svg" alt="">
+                            <div class="form-wrap collapse" id="collapse_2">
+                              <h5 class="flex-align-center fs-14 mb-20">
+                                <img src="../../../assets/images/svg/deploy.svg" class="mr-10" alt="">
                                 Add your package
-                              </button>
+                              </h5>
+                              <div class="row">
+                                <div class="col-md-12 mb-30">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <ul class="flex-column g-15 added-packages dots-style">
+                                        <li class="flex-space">
+                                          <span>Basic Package</span>
+                                          <span>100 SAR</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="input-group">
+                                    <label for="">Package Name</label>
+                                    <input type="text" name="" id="" placeholder="basic">
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="input-group mb-10">
+                                    <label for="">Meals</label>
+                                    <input type="text" name="" id="" placeholder="meal name">
+                                  </div>
+                                  <a href="" class="flex-align-center g-10 fs-14 text-primary">
+                                    <i class="fal fa-plus"></i>
+                                    Add meal
+                                  </a>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="input-group">
+                                    <label for="">Package price</label>
+                                    <input type="text" name="" id="" placeholder="100$">
+                                  </div>
+                                </div>
+                                <div class="col-md-12">
+                                  <div class="row">
+                                    <div class="col-md-6">
+                                      <button class="btn btn-transparent primary g-10 fs-14 w-100 h-50">
+                                        <i class="fal fa-plus"></i>
+                                        Add another package
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="bordered">
+                            <div class="custom-checkbox align-end">
+                              <input type="checkbox" name="" id="checkbox_10" class="followup-content hidden-input">
+                              <label for="checkbox_10" class="collapsed w-40" data-toggle="collapse" href="#collapse_3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <img src="../../../assets/images/svg/coffee-icon.svg" alt="">
+                                Coffee
+                              </label>
                             </div>
                           </li>
                         </ul>
@@ -651,8 +730,120 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                   <h6>Step 3</h6>
                   <fieldset>
                     <div class="form-group">
-                      <label for="eventName">Event Name :</label>
-                      <input type="text" class="form-control" id="eventName" >
+                      <div class="flex-center mb-25">
+                        <ul class="nav nav-tabs box-style centered g-15" id="myTab" role="tablist">
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="daily-tab" data-toggle="tab" data-target="#daily" type="button" role="tab" aria-controls="daily" aria-selected="true">daily</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="weekly-tab" data-toggle="tab" data-target="#weekly" type="button" role="tab" aria-controls="weekly" aria-selected="false">weekly</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="monthly-tab" data-toggle="tab" data-target="#monthly" type="button" role="tab" aria-controls="monthly" aria-selected="false">monthly</button>
+                          </li>
+                          <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="yearly-tab" data-toggle="tab" data-target="#yearly" type="button" role="tab" aria-controls="yearly" aria-selected="false">yearly</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="tab-content w-40" id="myTabContent">
+                        <div class="tab-pane fade show active" id="daily" role="tabpanel" aria-labelledby="daily-tab">
+                          <div class="input-group">
+                            <label for="" class="text-gray">Hourly rate day</label>
+                            <input type="text" name="" id="" placeholder="400 SAR">
+                            <small class="mt-10">Booking price without the Additional service</small>
+                          </div>
+                          <ul class="invoice-list flex-column g-20 mb-30">
+                            <li class="flex-space fs-16 text-gray">
+                              <span>Mesa Service Fee</span>
+                              <span>10%</span>
+                            </li>
+                            <li class="flex-space fs-16 text-gray">
+                              <span>VAT</span>
+                              <span>15%</span>
+                            </li>
+                          </ul>
+                          <div class="input-group">
+                            <label for="" class="text-gray">Total</label>
+                            <input type="text" name="" id="" placeholder="550 SAR">
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="weekly" role="tabpanel" aria-labelledby="weekly-tab">
+                          <div class="input-group">
+                            <label for="" class="text-gray">Hourly rate day</label>
+                            <input type="text" name="" id="" placeholder="400 SAR">
+                            <small class="mt-10">Booking price without the Additional service</small>
+                          </div>
+                          <div class="input-group">
+                            <label for="" class="text-gray">Full space booking price</label>
+                            <input type="text" name="" id="" placeholder="400 SAR">
+                            <small class="mt-10">Booking price without the Additional service</small>
+                          </div>
+                          <ul class="invoice-list flex-column g-20 mb-30">
+                            <li class="flex-space fs-16 text-gray">
+                              <span>Mesa Service Fee</span>
+                              <span>10%</span>
+                            </li>
+                            <li class="flex-space fs-16 text-gray">
+                              <span>VAT</span>
+                              <span>15%</span>
+                            </li>
+                          </ul>
+                          <div class="input-group">
+                            <label for="" class="text-gray">Hourly Total</label>
+                            <input type="text" name="" id="" placeholder="550 SAR">
+                          </div>
+                          <div class="input-group">
+                            <label for="" class="text-gray">Full Space Total</label>
+                            <input type="text" name="" id="" placeholder="550 SAR">
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
+                          <div class="input-group">
+                            <label for="" class="text-gray">Full space booking price</label>
+                            <input type="text" name="" id="" placeholder="400 SAR">
+                            <small class="mt-10">Booking price without the Additional service</small>
+                          </div>
+                          <ul class="invoice-list flex-column g-20 mb-30">
+                            <li class="flex-space fs-16 text-gray">
+                              <span>Mesa Service Fee</span>
+                              <span>10%</span>
+                            </li>
+                            <li class="flex-space fs-16 text-gray">
+                              <span>VAT</span>
+                              <span>15%</span>
+                            </li>
+                          </ul>
+                          <div class="input-group">
+                            <label for="" class="text-gray">Total</label>
+                            <input type="text" name="" id="" placeholder="550 SAR">
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="yearly" role="tabpanel" aria-labelledby="yearly-tab">
+                          <div class="input-group">
+                            <label for="" class="text-gray">Full space booking price</label>
+                            <input type="text" name="" id="" placeholder="400 SAR">
+                            <small class="mt-10">Booking price without the Additional service</small>
+                          </div>
+                          <ul class="invoice-list flex-column g-20 mb-30">
+                            <li class="flex-space fs-16 text-gray">
+                              <span>Mesa Service Fee</span>
+                              <span>10%</span>
+                            </li>
+                            <li class="flex-space fs-16 text-gray">
+                              <span>VAT</span>
+                              <span>15%</span>
+                            </li>
+                          </ul>
+                          <div class="input-group">
+                            <label for="" class="text-gray">Total</label>
+                            <input type="text" name="" id="" placeholder="550 SAR">
+                          </div>
+                          <div class="input-group">
+                            <label for="" class="text-gray">Minimum Payment</label>
+                            <input type="text" name="" id="" placeholder="100 SAR">
+                          </div>
+                      </div>
                     </div>
                   </fieldset>
               </form>
@@ -686,6 +877,8 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
   <script src="../../../app-assets/vendors/js/extensions/jquery.steps.min.js"></script>
   <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.js"></script>
   <script src="../../../app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+  <script src="../../../app-assets/vendors/js/forms/repeater/jquery.repeater.min.js"></script>
+  <script src="../../../app-assets/vendors/js/modal/sweetalert.min.js"></script>
   <script src="../../../app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
   <script src="../../../app-assets/js/scripts/tables/datatables/datatable-basic.js"
   type="text/javascript"></script>  <!-- END PAGE LEVEL JS-->

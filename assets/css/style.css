@@ -8,6 +8,7 @@
     --warning-color: #FF7A00;
     --success-color: #0D9E1C;
     --black-color: #111111;
+    --gray-color: #4B4B4B;
     --blue-color: #01058A;
 }
 
@@ -233,6 +234,9 @@ html body .content .content-wrapper {
 .text-black{
     color: #111111 !important;
 }
+.text-gray{
+    color: var(--gray-color) !important;
+}
 .text-blue{
     color: var(--blue-color) !important;
 }
@@ -280,28 +284,28 @@ html body .content .content-wrapper {
 }
 
 .g-5{
-    gap: 5px;
+    gap: 5px !important;
 }
 .g-10{
-    gap: 10px;
+    gap: 10px !important;
 }
 .g-15{
-    gap: 15px;
+    gap: 15px !important;
 }
 .g-20{
-    gap: 20px;
+    gap: 20px !important;
 }
 .g-25{
-    gap: 25px;
+    gap: 25px !important;
 }
 .g-30{
-    gap: 30px;
+    gap: 30px !important;
 }
 .g-40{
-    gap: 40px;
+    gap: 40px !important;
 }
 .g-50{
-    gap: 50px;
+    gap: 50px !important;
 }
 
 .w-40{
@@ -309,6 +313,10 @@ html body .content .content-wrapper {
 }
 .w-100{
     width: 100% !important;
+}
+
+.h-50{
+    height: 50px !important;
 }
 
 .carousel-control-prev, .carousel-control-next{
@@ -572,6 +580,10 @@ ul.d-flex li>img{
     align-items: center;
 }
 
+.select2-container{
+    max-width: 100%;
+}
+
 .select-group .select2-container--classic .select2-selection--single, 
 .select-group .select2-container--default .select2-selection--single,
 .select-group .select2-container--default .select2-selection--multiple{
@@ -694,7 +706,42 @@ ul.d-flex li>img{
 .dropzone{
     border: 1px solid #F7F7F7;
     background: #F7F7F7;
-    border-radius: 6px;
+    border-radius: 8px;
+    max-height: 150px;
+    max-width: 100%;
+    padding: 0;
+}
+
+.dropzone.full-preview .dz-preview{
+    margin: 0 !important;
+    width: 100%;
+    max-height: 150px;
+}
+
+.dropzone.full-preview .dz-preview .dz-image{
+    width: 100%;
+    height: 100%;
+}
+
+.dropzone.full-preview .dz-preview .dz-image img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.dropzone.full-preview .dz-preview .dz-error-message{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+}
+
+.dz-preview:not(.dz-processing){
+    visibility: hidden;
+    display: none;
+}
+
+.dropzone .dz-preview .dz-image{
+    border-radius: 8px;
 }
 
 .dropzone.dz-clickable .dz-message{
@@ -751,16 +798,29 @@ ul.d-flex li>img{
     color: var(--primary-color);
 }
 
-.btn-transparent svg path{
-    stroke: var(--primary-color);
-}
-
 .btn-transparent:hover,
 .btn-transparent:active,
 .btn-transparent:focus{
     background-color: var(--primary-color) !important;
     border-color: var(--primary-color) !important;
     color: #FFF;
+}
+
+.btn-transparent.primary{
+    border-color: var(--primary-color);
+    color: var(--primary-color) !important;
+    border-radius: 4px;
+}
+
+.btn-transparent.primary:hover,
+.btn-transparent.primary:active,
+.btn-transparent.primary:focus{
+    background-color: var(--primary-color) !important;
+    color: #FFF !important;
+}
+
+.btn-transparent svg path{
+    stroke: var(--primary-color);
 }
 
 .btn-transparent:hover svg path,
@@ -804,6 +864,30 @@ ul.d-flex li>img{
 .nav.nav-tabs .nav-item .nav-link.active{
     border-bottom: 1px solid #215CA8;
     color: var(--primary-color);
+}
+
+.nav-tabs.box-style{
+    background-color: #F9F9F9;
+    border-radius: 6px;
+    padding: 10px 15px;
+}
+
+.nav-tabs.box-style .nav-item{
+    margin: 0;
+}
+
+.nav-tabs.box-style .nav-item .nav-link{
+    padding: 6px 30px;
+    font-size: 16px;
+    line-height: 150%;
+    color: #111111;
+    border-radius: 4px !important;
+}
+
+.nav-tabs.box-style .nav-item .nav-link.active{
+    background-color: var(--blue-color);
+    color: #FFFFFF;
+    border: 0;
 }
 
 .label{
@@ -850,6 +934,7 @@ ul.d-flex li>img{
     line-height: 18px;
     font-family: 'Montserrat-500';
     color: var(--black-color);
+    margin-bottom: 0;
 }
 
 .fs-15 .custom-checkbox label{
@@ -940,6 +1025,24 @@ label.title-style{
 ul.flex-column.border-right{
     padding-right: 30px;
     border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+ul.dots-style li{
+    padding-left: 30px;
+    position: relative;
+}
+
+ul.dots-style li::before{
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
 }
 /* 
 --------------------------------------------------------------------------------
@@ -1718,8 +1821,10 @@ ul.branches li a .flex-space svg{
 }
 
 .form-wizard .actions ul li:first-child a{
-    background-color: #A2A2A2;
+    border: 1px solid var(--primary-color);
+    background-color: #FFF;
     width: 270px;
+    color: var(--primary-color);
 }
 
 .form-wizard .actions ul li:not(:first-child) a:hover{
@@ -1727,8 +1832,20 @@ ul.branches li a .flex-space svg{
 }
 
 .form-wizard .actions ul li:first-child a:hover{
-    background-color: #969696;
+    background-color: var(--primary-color);
+    color: #FFF;
 }
+
+ul.drop-group{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+ul.drop-group li{
+    flex: 1;
+}
+
 
 .checkbox-list ul{
     display: flex;
@@ -1767,6 +1884,60 @@ ul.branches li a .flex-space svg{
 
 .checkbox-list ul li a:hover svg path{
     stroke: var(--primary-color);
+}
+
+.checkbox-list ul li.bordered .custom-checkbox label{
+    padding: 15px 40px 15px 20px;
+    border: 1px solid #D0D0D0;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.checkbox-list ul li.bordered .custom-checkbox label:not(.collapsed){
+    width: 100% !important;
+    border-radius: 6px 6px 0 0;
+}
+
+.checkbox-list ul li.bordered .custom-checkbox.align-end label::before{
+    right: 20px;
+}
+
+.checkbox-list ul li.bordered .custom-checkbox.align-end label::after{
+    right: 24px;
+}
+
+.checkbox-list ul li.bordered .custom-checkbox + .form-wrap{
+    padding: 15px 20px;
+    border: 1px solid #D0D0D0;
+    border-top: 0;
+    border-radius: 0 0 6px 6px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-list ul li.bordered .custom-checkbox + .form-wrap:not(.show){
+    opacity: 0;
+    overflow: hidden;
+    padding: 0;
+    pointer-events: none;
+}
+
+.added-packages li{
+    padding: 20px 20px 20px 30px;
+    background: #FBFBFB;
+    border: 1px solid rgba(33, 92, 168, 0.5);
+    border-radius: 8px;
+}
+
+.added-packages li span{
+    font-size: 14px;
+    line-height: 18px;
+    color: #4B4B4B;
+}
+
+ul.invoice-list{
+    padding: 15px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 /* End Owner NewSpace */
 /* 
