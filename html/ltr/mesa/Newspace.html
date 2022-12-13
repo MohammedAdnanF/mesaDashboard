@@ -28,6 +28,7 @@
   <!-- BEGIN Page Level CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/calendars/clndr.min.css">
+  <link rel="stylesheet" type="text/css" href="../../../assets/css/evo-calendar.min.css">
   <!-- END Page Level CSS-->
   <link rel="stylesheet" type="text/css" href="../../../app-assets/css/mesa.css">
   <!-- BEGIN Custom CSS-->
@@ -824,7 +825,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
   <!--=== Change Commission Modal ===-->
   <div class="modal fade" id="calenderModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
       aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <div class="modal-dialog sm-modal modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-dialog md-modal modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content lg-padding">
               <div class="modal-header centered">
                   <h5 class="modal-title" id="">Calender</h5>
@@ -833,12 +834,12 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
                   </button>
               </div>
               <div class="modal-body">
-                <div id="clndr-selected-date" class="overflow-hidden bg-grey bg-lighten-3"></div>
+                <div id="calendar"></div>
               </div>
           </div>
       </div>
   </div>
-  <div id="clndr" class="clearfix">
+  <!-- <div id="clndr" class="clearfix">
     <script type="text/template" id="clndr-template">
         <div class="clndr-controls">
             <div class="clndr-previous-button">&lt;</div>
@@ -880,7 +881,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
             <% }); %>
         </div>
     </script>
-  </div>
+  </div> -->
   <!-- BEGIN VENDOR JS-->
   <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
   <!-- BEGIN VENDOR JS-->
@@ -891,7 +892,7 @@ data-open="click" data-menu="vertical-menu" data-col="2-columns">
   <script src="../../../app-assets/vendors/js/extensions/underscore-min.js"></script>
   <script src="../../../app-assets/vendors/js/extensions/clndr.min.js"></script>
   <script src="../../../app-assets/vendors/js/tables/datatable/datatables.min.js" type="text/javascript"></script>
-
+  <script src="../../../assets/js/evo-calendar.min.js"></script>
  
   <script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
   <script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>

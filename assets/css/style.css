@@ -1377,6 +1377,217 @@ body.vertical-layout.vertical-menu.menu-expanded .navbar .navbar-container{
     content: "\f104";
 }
 
+.calendar-inner .calendar-table{
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+.event-indicator{
+    bottom: 0;
+    top: auto;
+    transform: translateX(-50%);
+}
+
+tr.calendar-body .calendar-day .day{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+}
+
+tr.calendar-body .calendar-day .day.calendar-active, 
+tr.calendar-body .calendar-day .day.calendar-active:hover{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #FFF;
+}
+
+tr.calendar-body .calendar-day .day.calendar-active .event-indicator>.type-bullet>div{
+    background-color: #FFF;
+}
+
+.event-indicator>.type-bullet>div{
+    width: 7px;
+    height: 7px;    
+}
+
+.calendar-sidebar>span#sidebarToggler{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: none;
+    padding: 10px;
+    width: 45px;
+}
+
+.calendar-sidebar>.calendar-year{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.calendar-sidebar .month-list{
+    height: calc(100% - 62px);
+    overflow-y: auto;
+}
+
+.event-hide .calendar-inner,
+.sidebar-hide .calendar-inner,
+.calendar-inner{
+    max-width: 100% !important;
+    box-shadow: none;
+}
+
+.calendar-inner{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.calendar-sidebar>.calendar-year>p{
+    font-size: 22px;
+}
+
+.calendar-sidebar>.calendar-year>button.icon-button{
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    align-items: center;
+}
+
+.evo-calendar{
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+}
+
+.calendar-events{
+    position: static;
+    width: 100%;
+    padding: 10px 0 0;
+    background-color: #FFF;
+}
+
+.calendar-table th[colspan="7"]{
+    font-size: 22px;
+    padding-bottom: 25px;
+    color: #4B4B4B;
+    text-transform: capitalize;
+    font-family: 'Montserrat-500';
+    font-weight: normal;
+}
+
+.calendar-table th[colspan="7"]::after{
+    bottom: 15px;
+}
+
+.calendar-events>.event-header>p{
+    font-size: 18px;
+    color: #4B4B4B;
+    font-family: 'Montserrat-400';
+}
+
+tr.calendar-header .calendar-header-day{
+    color: #8F9BB3;
+}
+
+.event-container>.event-icon{
+    display: none;
+}
+
+.event-container:hover{
+    box-shadow: none;
+    background-color: rgba(33, 92, 168, 0.1);
+}
+
+.event-container{
+    border-radius: 8px;
+    background-color: rgba(33, 92, 168, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.event-container>.event-info{
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+}
+
+.event-container>.event-info::before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    width: 10px;
+    min-height: 100%;
+    transform: translate(0) !important;
+    background-color: var(--primary-color);
+}
+
+.event-container>.event-info>p.event-title{
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: normal;
+    color: var(--primary-color);
+}
+
+.calendar-sidebar,
+.calendar-sidebar>span#sidebarToggler{
+    background-color: var(--primary-color);
+}
+
+.calendar-events .event-header{
+    display: none;
+}
+
+.event-list>.event-empty{
+    border-radius: 8px;
+    padding: 10px 15px;
+    border-color: var(--warning-color);
+    background-color: rgba(255, 122, 0, 0.15);
+}
+
+.event-list>.event-empty>p{
+    color: var(--warning-color);
+}
+
+.calendar-sidebar>.month-list>.calendar-months>li.active-month{
+    background-color: #113975;
+}
+
+.calendar-sidebar>.month-list>.calendar-months>li:hover{
+    background-color: var(--secondary-color);
+}
+
+button.icon-button>span.bars,
+button.icon-button>span.bars::before, 
+button.icon-button>span.bars::after{
+    transition: all 0.3s ease;
+    height: 3px;
+}
+
+.evo-calendar:not(.sidebar-hide) .calendar-sidebar button.icon-button>span.bars{
+    background-color: transparent;
+}
+
+.evo-calendar:not(.sidebar-hide) .calendar-sidebar button.icon-button>span.bars::after{
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+.evo-calendar:not(.sidebar-hide) .calendar-sidebar button.icon-button>span.bars::before{
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.event-container::before{
+    content: none;
+}
+
 /* 
 --------------------------------------------------------------------------------
 	End Components Style

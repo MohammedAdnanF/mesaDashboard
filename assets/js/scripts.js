@@ -1,4 +1,4 @@
-(function (window, undefined) {
+$(document).ready(function () {
   'use strict';
 
   $(window).on('click', function () {
@@ -40,47 +40,65 @@
     });
   }
 
-  if($('#clndr-selected-date').length){
-    var currentMonth = moment().format('YYYY-MM');
-    var nextMonth    = moment().add('month', 1).format('YYYY-MM');
-  
-    var events = [{
-      date: currentMonth + '-' + '10',
-      title: 'Persian Kitten Auction',
-      location: 'Center for Beautiful Cats'
-    }, {
-      date: currentMonth + '-' + '19',
-      title: 'Cat Frisbee',
-      location: 'Jefferson Park'
-    }, {
-      date: currentMonth + '-' + '23',
-      title: 'Kitten Demonstration',
-      location: 'Center for Beautiful Cats'
-    }, {
-      date: nextMonth + '-' + '07',
-      title: 'Small Cat Photo Session',
-      location: 'Center for Cat Photography'
-    }];
-
-    $('#clndr-selected-date').clndr({
-      template: $('#clndr-template').html(),
-      events: events,
-      trackSelectedDate: true,
-    });
-  }
-
-  if($('.repeater').length){
+  if ($('.repeater').length) {
     $('.repeater').repeater();
   }
 
   // File Upload (--Dropzones--)
-  Dropzone.autoDiscover = false;
-  $('.dropzone.single-file').each(function(){
-    $(this).dropzone({ 
-      maxFiles: 1,
-      url: "#"
+  if ($('dropzone').length) {
+    Dropzone.autoDiscover = false;
+    $('.dropzone.single-file').each(function () {
+      $(this).dropzone({
+        maxFiles: 1,
+        url: "#"
+      });
     });
+  }
+
+
+  $('#calendar').evoCalendar({
+    'sidebarDisplayDefault': false,
+    'eventDisplayDefault': true,
+    'eventListToggler': false
   });
+
+  $('#calendar').evoCalendar('addCalendarEvent', [
+    {
+      id: 'kNybja6',
+      name: 'Mom\'s Birthday',
+      description: 'Lorem ipsum dolor sit amet..',
+      date: 'Dec 16, 2022',
+      type: 'birthday',
+      everyYear: true // optional
+    },
+    {
+      id: 'kNybja6',
+      name: 'My Birthday',
+      date: 'Dec 16, 2022',
+      type: 'birthday',
+      everyYear: true // optional
+    },
+    {
+      id: 'kNybja6',
+      name: 'Graduation Day!',
+      date: 'Dec 9, 2022',
+      type: 'birthday',
+      everyYear: true // optional
+    },
+    {
+      id: 'kNybja6',
+      name: 'Father Day',
+      date: 'Dec 20, 2022',
+      type: 'birthday',
+      everyYear: true // optional
+    },
+    {
+      id: 'asDf87L',
+      name: 'Graduation Day!',
+      date: 'Jan 1, 2023',
+      type: 'event'
+    }
+  ]);
 
   /*
   NOTE:
@@ -88,4 +106,4 @@
   PLACE HERE YOUR OWN JAVASCRIPT CODE IF NEEDED
   WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR JAVASCRIPT CODE PLEASE CONSIDER WRITING YOUR SCRIPT HERE.  */
 
-})(window);
+});
