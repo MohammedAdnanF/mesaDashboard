@@ -165,6 +165,12 @@ div::-webkit-scrollbar-thumb{
     box-shadow: inset 0 0 6px rgba(0,0,0,.2);
 	background-color: #bbbbbb;
 }
+
+@media only screen and (max-width: 575px){
+    body {
+        font-size: 15px;
+    }
+}
 /*
 -----------------------------------------------------------------------
     End Typography CSS
@@ -421,9 +427,22 @@ html body .content .content-wrapper {
 	stroke: var(--primary-color);
 }
 
+ul.d-flex{
+    flex-wrap: wrap;
+}
+
+ul.d-flex.g-30{
+    gap: 15px 30px !important;
+}
+
+ul.d-flex.g-50{
+    gap: 20px 50px !important;
+}
+
 ul.d-flex li{
     display: inline-flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 ul.d-flex li{
@@ -1588,6 +1607,38 @@ button.icon-button>span.bars::after{
     content: none;
 }
 
+@media (max-width: 768px){
+    .event-hide .calendar-events{
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 425px){
+    .calendar-sidebar>.calendar-year {
+        width: calc(100% - 50px);
+        box-shadow: none;
+        background-color: #215ca8;
+    }
+
+    .calendar-sidebar>.month-list{
+        background-color: #215ca8;
+    }
+
+    .calendar-sidebar>span#sidebarToggler{
+        width: 51px;
+        height: 61.25px;
+    }
+
+    .event-indicator{
+        bottom: 4px;
+    }
+
+    .event-hide .calendar-events {
+        padding: 0;
+        height: auto;
+    }
+}
+
 /* 
 --------------------------------------------------------------------------------
 	End Components Style
@@ -1647,6 +1698,59 @@ button.icon-button>span.bars::after{
 .btn-edit:hover svg path,
 .btn-calender:hover svg path{
     stroke: var(--primary-color);
+}
+
+@media only screen and (max-width: 991px){
+    .newspace-slider .carousel-inner .carousel-item img {
+        height: 290px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .newspace-slider .carousel-inner .carousel-item img {
+        height: 260px;
+    }
+
+    .modal-content.lg-padding .modal-body{
+        padding: 25px 30px 35px;
+    }
+
+    .modal-content.lg-padding .modal-header{
+        padding: 20px 30px;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    .newspace-slider .carousel-inner .carousel-item img {
+        height: 220px;
+    }
+
+    .flex-end .btn{
+        flex: 1;
+    }
+
+    .modal-content.lg-padding .modal-body{
+        padding: 15px 20px 25px;
+    }
+
+    .modal-content.lg-padding .modal-header{
+        padding: 15px 20px;
+    }
+
+    .modal.show .modal-dialog{
+        margin: 0;
+        height: 100%;
+    }
+
+    .modal-content{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    .newspace-slider .carousel-inner .carousel-item img {
+        height: 190px;
+    }
 }
 /* 
 --------------------------------------------------------------------------------
